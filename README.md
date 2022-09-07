@@ -1,5 +1,7 @@
 # BESTARSHOP-project
 
+### neue
+
 ## Features
 
 - **Register**: Der User kann sich einem Account erstellen und meldet sich damit automatisch an
@@ -28,3 +30,71 @@ npm install
 ### /_ Then start the React app _/
 
 npm start
+
+## Enspunkte
+
+### POST /user/login
+
+logget user ein
+
+Body:
+
+```javascript
+{
+  email: "my@mail.de";
+  password: "123456";
+}
+```
+
+Response:
+
+```javascript
+{
+  id: "ndfjher764tz874";
+  email: "my@mail.de";
+  name: "Hans Müller";
+  adresse: "Musterstraße 1 11111 stadt";
+}
+```
+
+### POST /user/register
+
+erstellt einen neuen user und loggt ihn ein
+
+Body:
+
+```javascript
+{
+  email: "my@mail.de";
+  password: "123456";
+  name: "Hans Müller";
+}
+```
+
+Response:
+
+```javascript
+{
+  id: "ndfjher764tz874";
+  email: "my@mail.de";
+  name: "Hans Müller";
+  adresse: "Musterstraße 1 11111 stadt";
+}
+```
+
+### POST /user/logout
+
+der usertoken cookie wird gelöscht. der token wird aus der datenbank entfernt
+
+Body:
+
+```javascript
+{
+}
+```
+
+Response:
+
+```javascript
+true;
+```
