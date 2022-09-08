@@ -1,0 +1,30 @@
+.Layout {
+  > header {
+    height: 90px;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+
+    > .header-left {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      padding-left: 20px;
+    }
+
+    > .logo {
+      font-size: 70px;
+      color: black;
+      text-align: center;
+    }
+
+    > .header-right {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      padding-right: 20px;
+    }
+  }
+}
