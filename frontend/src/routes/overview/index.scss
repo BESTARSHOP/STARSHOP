@@ -1,3 +1,89 @@
-h1 {
-  color: blue;
+.overview {
+  > .products-fotos {
+    display: flex;
+    > .logo-1 {
+      background-image: url(../../images/78932a1d96aaab8776e62f8bdeb3a00b.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 750px;
+
+      > .view-button-1 {
+        position: absolute;
+        text-decoration: none;
+        color: black;
+        background: #efeae2;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: large;
+        bottom: 180px;
+        margin-left: 160px;
+        opacity: 0.6;
+      }
+      > .view-button-1:hover {
+        opacity: 1;
+      }
+    }
+    > .logo-2 {
+      background-image: url(../../images/photo-1606760227091-3dd870d97f1d.jpeg);
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 750px;
+
+      > .view-button-2 {
+        position: absolute;
+        text-decoration: none;
+        color: black;
+        background: #efeae2;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: large;
+        bottom: 180px;
+        margin-left: 160px;
+        opacity: 0.6;
+      }
+      > .view-button-2:hover {
+        opacity: 1;
+      }
+    }
+    > .logo-3 {
+      background-image: url(../../images/d3bb70c98cecbcd6c1c6e95624b6de9d.jpg);
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 750px;
+
+      > .view-button-3 {
+        position: absolute;
+        text-decoration: none;
+        color: black;
+        background: #efeae2;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: large;
+        bottom: 180px;
+        margin-left: 160px;
+        opacity: 0.6;
+      }
+      > .view-button-3:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  > .footer {
+    position: fixed;
+    background-color: #ddc9bc;
+    width: 100%;
+    height: 10%;
+    font-size: small;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+
+    > .footer-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
 }
