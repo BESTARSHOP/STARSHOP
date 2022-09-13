@@ -6,6 +6,11 @@ const { DB_URL, DB_PORT, DB_NAME, PORT } = process.env;
 
 mongoose.connect(`mongodb://${DB_URL}:${DB_PORT}/${DB_NAME}`);
 const app = express();
+app.use(express.json());
+
+app.use("/user", require("./src/routes/user"));
+app.use("/cart", require("./src/routes/cart"));
+app.use("/products", require("./src/routes/products"));
 
 app.use((req, res, next) => {
   const error = new Error("Nicht gefunden");
