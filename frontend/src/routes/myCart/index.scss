@@ -1,3 +1,80 @@
-h1 {
-  color: blue;
-}
+// .my-cart {
+//   background-color: #efeae3;
+//   width: 100%;
+//   height: auto;
+
+//   > .titel {
+//     display: flex;
+//     align-items: center;
+//     gap: 2rem;
+//     font-size: xx-large;
+//     margin-left: 11.5rem;
+//     padding-top: 4rem;
+
+//     > h1 {
+//       color: black;
+//     }
+//     > p {
+//       margin-top: 1.2rem;
+//     }
+//   }
+
+//   > hr {
+//     width: 80%;
+//   }
+
+//   > .prduct-info {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 4rem;
+//     text-align: center;
+
+//     > .name-price-product {
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
+//       padding-left: 40rem;
+
+//       > p {
+//         font-weight: bolder;
+//         padding-right: 20rem;
+//       }
+//     }
+
+//     > .number {
+//       display: flex;
+//       gap: 1.5rem;
+//       align-items: center;
+//       padding-left: 40rem;
+//       font-size: larger;
+
+//       > .input {
+//         width: 100px;
+//         height: 30px;
+//         box-sizing: border-box;
+//         border: 2px solid #ccc;
+//         border-radius: 30px;
+//         font-size: 16px;
+//         background-color: #efeae3;
+//         background-position: 5px 10px;
+//         background-size: 1.8rem;
+//         background-repeat: no-repeat;
+//         padding: 12px 20px 12px 40px;
+//         cursor: pointer;
+//       }
+//     }
+
+//     > .delete-area {
+//       display: flex;
+//       gap: 0.5rem;
+//       align-items: center;
+//       padding-left: 40rem;
+//       font-size: larger;
+//       cursor: pointer;
+
+//       > p {
+//         text-decoration: underline;
+//       }
+//     }
+//   }
+// }
