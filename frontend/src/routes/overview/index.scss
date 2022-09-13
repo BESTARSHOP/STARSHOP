@@ -1,3 +1,154 @@
-h1 {
-  color: blue;
+.overview {
+  > .products-fotos {
+    display: flex;
+    > .logo-1 {
+      background-image: url(../../images/depositphotos_64958773-stock-photo-fashion-couple-posing-on-grey.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 750px;
+
+      > .view-button-1 {
+        position: absolute;
+        text-decoration: none;
+        color: black;
+        background: #efeae2;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: large;
+        bottom: 180px;
+        margin-left: 160px;
+        opacity: 0.6;
+        font-family: "Cutive Mono", monospace;
+        font-weight: bold;
+      }
+      > .view-button-1:hover {
+        opacity: 1;
+        transition: 0.5s ease;
+        font-size: x-large;
+        box-shadow: 3px 3px 20px;
+        padding: 10px;
+        transition: 0.5s ease;
+        background: #efeae2;
+      }
+    }
+    > .logo-2 {
+      background-image: url(../../images/a1878c73a8a3173cf4fa9742307ecbef.jpg);
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 750px;
+
+      > .view-button-2 {
+        position: absolute;
+        text-decoration: none;
+        color: black;
+        background: #efeae2;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: large;
+        bottom: 180px;
+        margin-left: 160px;
+        opacity: 0.6;
+        font-family: "Cutive Mono", monospace;
+        font-weight: bold;
+      }
+      > .view-button-2:hover {
+        opacity: 1;
+        transition: 0.5s ease;
+        font-size: x-large;
+        box-shadow: 3px 3px 20px;
+        padding: 10px;
+        transition: 0.5s ease;
+        background: #efeae2;
+      }
+    }
+    > .logo-3 {
+      background-image: url(../../images/interior-define-charly-ecru.jpg);
+      background-repeat: no-repeat;
+
+      background-size: cover;
+      width: 100%;
+      height: auto;
+
+      > .view-button-3 {
+        position: absolute;
+        text-decoration: none;
+        color: black;
+        background: #efeae2;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: large;
+        bottom: 180px;
+        margin-left: 160px;
+        opacity: 0.6;
+        font-family: "Cutive Mono", monospace;
+        font-weight: bold;
+      }
+      > .view-button-3:hover {
+        opacity: 1;
+        transition: 0.5s ease;
+        font-size: x-large;
+        box-shadow: 3px 3px 20px;
+        padding: 10px;
+        transition: 0.5s ease;
+        background: #efeae2;
+      }
+    }
+  }
+
+  > .footer {
+    position: fixed;
+    background-color: #ddc9bc;
+    width: 100%;
+    height: auto;
+    font-size: small;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+
+    > .footer-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    > .footer-contact {
+      font-size: medium;
+
+      > .footer-icons {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        font-size: large;
+
+        > .footer-icons-instagram {
+          color: red;
+        }
+
+        > .footer-icons-instagram:hover {
+          transition: 0.5s ease;
+          font-size: xx-large;
+          padding: 10px;
+        }
+        > .footer-icons-twitter {
+          color: blue;
+        }
+        > .footer-icons-twitter:hover {
+          transition: 0.5s ease;
+          font-size: xx-large;
+          padding: 10px;
+        }
+        > .footer-icons-facebook {
+          color: indigo;
+        }
+        > .footer-icons-facebook:hover {
+          transition: 0.5s ease;
+          font-size: xx-large;
+          padding: 10px;
+        }
+      }
+    }
+  }
 }

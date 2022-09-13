@@ -1,12 +1,14 @@
-import { useParams } from "react-router-dom";
+//import { useParams } from "react-router-dom";
 import "./index.scss";
 import Layout from "../../Layout";
 
+//import { useState } from "react";
+//import { BsCartPlus } from "react-icons/bs";
+
 export default function Product() {
-  const params = useParams();
   return (
-    <Layout>
-      <h1>Product Route [{params.id}]</h1>
-    </Layout>
+    <>
+      <Layout></Layout>
+    </>
   );
 }
