@@ -3,7 +3,7 @@ import { useCart } from "react-use-cart";
 import { Link } from "react-router-dom";
 
 export default function ProductCard(props) {
-  let { images, price, title } = props.data;
+  let { image, price, title } = props.data;
   const { addItem } = useCart();
 
   const addToCart = (props) => {
@@ -30,7 +30,12 @@ export default function ProductCard(props) {
         }}
       >
         <div style={{ width: "auto", height: "auto" }}>
-          <Card.Img variant="top" src={images[0]} className="img-fluid" />
+          <Card.Img
+            variant="top"
+            src={image}
+            style={{ height: "300px" }}
+            className="img-fluid"
+          />
         </div>
       </div>
       <Card.Body>
