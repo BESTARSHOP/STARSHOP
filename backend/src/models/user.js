@@ -7,6 +7,5 @@ const Schema = mongoose.Schema({
   bayMethode: { type: String, required: true },
   token: String,
   cart: { type: mongoose.SchemaTypes.ObjectId, ref: "Cart" },
-  product: [{ type: mongoose.SchemaTypes.ObjectId, ref: "Product" }],
 });
 module.exports = mongoose.model("User", Schema, "users");
