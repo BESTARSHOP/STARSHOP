@@ -8,7 +8,7 @@ export default function Layout(props) {
     <div className="Layout">
       <header>
         <div className="header-left">
-          <div className="logo">𝕊𝕋𝔸ℝ 𝕊ℍ𝕆ℙ</div>
+          <div className="logo">𝕊𝕋𝔸ℝ 𝕊ℍ𝕆ℙ </div>
         </div>
         <div className="header-center">
           <Link to="/" className="overview-button">
