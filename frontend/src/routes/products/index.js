@@ -15,8 +15,8 @@ export default function Products() {
   // const { id } = useParams();
   // const search = window.location.search;
   async function getResponse() {
-    const res = await fetch("https://api.escuelajs.co/api/v1/products").then(
-      (res) => res.json()
+    const res = await fetch("https://fakestoreapi.com/products").then((res) =>
+      res.json()
     );
     setProductData(res);
     setFilter(res);
@@ -27,7 +27,7 @@ export default function Products() {
   }, []);
 
   const filterProduct = (cat) => {
-    const results = productData.filter((x) => x.category.id === cat);
+    const results = productData.filter((x) => x.category === cat);
     setFilter(results);
     console.log(results, cat);
   };
@@ -48,33 +48,27 @@ export default function Products() {
           </button>
           <button
             className="button products-men-button"
-            onClick={() => filterProduct(1)}
+            onClick={() => filterProduct("men's clothing")}
           >
-            Clothes
+            men's clothing
           </button>
           <button
             className="button products-women-button"
-            onClick={() => filterProduct(2)}
+            onClick={() => filterProduct("women's clothing")}
           >
-            Electronics
+            women's clothing
           </button>
           <button
             className="button products-women-button"
-            onClick={() => filterProduct(3)}
+            onClick={() => filterProduct("electronics")}
           >
-            Furniture
+            electronics
           </button>
           <button
             className="button products-women-button"
-            onClick={() => filterProduct(4)}
+            onClick={() => filterProduct("jewelery")}
           >
-            Shoes
-          </button>
-          <button
-            className="button products-women-button"
-            onClick={() => filterProduct(5)}
-          >
-            Others
+            jewelery
           </button>
         </div>
 
