@@ -5,14 +5,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Row, Col, InputGroup } from "react-bootstrap";
 import SearchFilter from "react-filter-search";
 import ProductCard from "../../component/productCard";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
 export default function Products() {
   const [searchInput, setSearchInput] = useState("");
   const [productData, setProductData] = useState([]);
   const [filter, setFilter] = useState(productData);
 
-  const { id } = useParams();
+  // const { id } = useParams();
+  // const search = window.location.search;
   async function getResponse() {
     const res = await fetch("https://api.escuelajs.co/api/v1/products").then(
       (res) => res.json()
@@ -30,9 +31,9 @@ export default function Products() {
     setFilter(results);
     console.log(results, cat);
   };
-  useEffect(() => {
-    if (id) filterProduct(parseInt(id));
-  }, [id, productData]);
+  // useEffect(() => {
+  //   if (id) filterProduct(parseInt(id));
+  // }, [id, productData]);
 
   return (
     <>
