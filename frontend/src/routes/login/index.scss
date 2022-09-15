@@ -1,3 +1,56 @@
-h1 {
-  color: blue;
+.Login {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  height: 400px;
+
+  > .box {
+    border: 1px solid;
+    width: 500px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+
+    > .h1-login {
+      font-size: 20px;
+      margin: 0;
+    }
+
+    > .input-group {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+
+      > .label {
+        width: 150px;
+        text-align: right;
+        margin-right: 20px;
+      }
+
+      > input {
+        flex: 1;
+        padding: 8px;
+      }
+    }
+
+    > .toggle-register {
+      text-align: right;
+      margin-top: 20px;
+      font-weight: bold;
+      color: #1a5eaa;
+      cursor: pointer;
+    }
+
+    > button {
+      margin-top: 30px;
+      cursor: pointer;
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background-color: black;
+      color: white;
+      font-family: "Roboto", sans-serif;
+      border-radius: 3px;
+    }
+  }
 }

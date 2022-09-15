@@ -45,7 +45,12 @@ p {
         background: #efeae2;
         padding: 10px 20px;
         border-radius: 5px;
-        font-size: large;
+        font-size: x-large;
+      }
+      > .overview-button:hover,
+      .products-button:hover {
+        color: brown;
+        font-weight: bolder;
       }
     }
 
