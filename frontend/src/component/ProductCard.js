@@ -28,7 +28,7 @@ export default function ProductCard(props) {
           <Card.Img
             variant="top"
             src={image}
-            style={{ height: "300px" }}
+            style={{ height: "35vh" }}
             className="img-fluid"
           />
         </div>
@@ -54,8 +54,8 @@ export default function ProductCard(props) {
             color: "black",
             border: "solid 1px black",
             borderRadius: "10px",
-            width: "130px",
-            height: "45px",
+            width: "35wh",
+            height: "7vh",
             fontSize: "large",
             alignItems: "center",
             paddingLeft: "1.8rem",
