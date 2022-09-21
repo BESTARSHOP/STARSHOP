@@ -2,6 +2,7 @@ const express = require("express");
 const controller = require("../controllers/user");
 const app = express.Router();
 const validation = require("../lib/validators/user");
+require("express-async-middleware");
 
 app.post("/logout", controller.logout);
 app.post("/register", validation.register, controller.register);
