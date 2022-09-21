@@ -19,7 +19,7 @@ export default function Layout(props) {
           </Link>
         </div>
         <div className="header-right">
-          <Link to="/account" className="icon-account">
+          <Link to="/login" className="icon-account">
             <FaUserAlt size={35} color="black" />
           </Link>
           <button>
