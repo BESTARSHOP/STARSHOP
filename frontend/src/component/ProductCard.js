@@ -1,14 +1,10 @@
 import { Card } from "react-bootstrap";
-import { useCart } from "react-use-cart";
+
 import { Link } from "react-router-dom";
 
 export default function ProductCard(props) {
-  let { image, price, title } = props.data;
-  const { addItem } = useCart();
+  let { id, image, price, title } = props.data;
 
-  const addToCart = (props) => {
-    addItem(props.data);
-  };
   return (
     <Card
       style={{
@@ -20,7 +16,6 @@ export default function ProductCard(props) {
     >
       <div
         className={{
-          background: "white",
           height: "15rem",
           overflow: "hidden",
           display: "flex",
@@ -52,8 +47,7 @@ export default function ProductCard(props) {
           Rs. <span className="h3">{price}</span>
         </Card.Title>
         <Link
-          to="/products/:id"
-          onClick={() => addToCart()}
+          to={"/product/" + id}
           className={`d-flex `}
           style={{
             background: "#EFEAE3",
@@ -69,7 +63,7 @@ export default function ProductCard(props) {
             textDecoration: "none",
           }}
         >
-          Buy now
+          View Product
         </Link>
       </Card.Body>
     </Card>

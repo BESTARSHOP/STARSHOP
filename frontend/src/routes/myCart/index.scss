@@ -1,80 +1,67 @@
-// .my-cart {
-//   background-color: #efeae3;
-//   width: 100%;
-//   height: auto;
+.payment-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  float: right;
+}
 
-//   > .titel {
-//     display: flex;
-//     align-items: center;
-//     gap: 2rem;
-//     font-size: xx-large;
-//     margin-left: 11.5rem;
-//     padding-top: 4rem;
+.payment1 {
+  border: 2px solid black;
+  background-color: #ddc9bc;
+  width: 30rem;
+  height: 34rem;
+  margin-right: 2rem;
+  margin-top: 0;
 
-//     > h1 {
-//       color: black;
-//     }
-//     > p {
-//       margin-top: 1.2rem;
-//     }
-//   }
+  > .h1 {
+    padding: 0.5rem 2rem;
+  }
+  > .paragraph {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    font-size: large;
 
-//   > hr {
-//     width: 80%;
-//   }
+    > p > .span {
+      font-size: x-small;
+    }
+  }
+  > hr {
+    width: 85%;
+    margin-left: 2rem;
+  }
+}
 
-//   > .prduct-info {
-//     display: flex;
-//     flex-direction: column;
-//     gap: 4rem;
-//     text-align: center;
+.payment2 {
+  border: 2px solid black;
+  background-color: #ddc9bc;
+  width: 30rem;
+  height: 9.7rem;
+  margin-right: 2rem;
+  float: right;
+  margin-top: 0;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 
-//     > .name-price-product {
-//       display: flex;
-//       justify-content: space-between;
-//       align-items: center;
-//       padding-left: 40rem;
+  > .div1 > h6 {
+    padding: 0.5rem 0 0 0;
+  }
 
-//       > p {
-//         font-weight: bolder;
-//         padding-right: 20rem;
-//       }
-//     }
+  > .div1 > .methods-of-payment {
+    display: flex;
+    gap: 2rem;
+  }
+  > .div2 > .methods-of-payment2 {
+    display: flex;
+    gap: 2rem;
 
-//     > .number {
-//       display: flex;
-//       gap: 1.5rem;
-//       align-items: center;
-//       padding-left: 40rem;
-//       font-size: larger;
-
-//       > .input {
-//         width: 100px;
-//         height: 30px;
-//         box-sizing: border-box;
-//         border: 2px solid #ccc;
-//         border-radius: 30px;
-//         font-size: 16px;
-//         background-color: #efeae3;
-//         background-position: 5px 10px;
-//         background-size: 1.8rem;
-//         background-repeat: no-repeat;
-//         padding: 12px 20px 12px 40px;
-//         cursor: pointer;
-//       }
-//     }
-
-//     > .delete-area {
-//       display: flex;
-//       gap: 0.5rem;
-//       align-items: center;
-//       padding-left: 40rem;
-//       font-size: larger;
-//       cursor: pointer;
-
-//       > p {
-//         text-decoration: underline;
-//       }
-//     }
-//   }
-// }
+    > .dhl,
+    .hermes,
+    .gls {
+      width: 3rem;
+      height: 1.5rem;
+    }
+  }
+}

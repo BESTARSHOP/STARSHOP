@@ -5,7 +5,7 @@ import AccountRoute from "./routes/account";
 import LoginRoute from "./routes/login";
 import MyCartRoute from "./routes/myCart";
 import PaymentRoute from "./routes/payment";
-import ProductRoute from "./routes/products_id";
+import ProductRoute from "./routes/product";
 import ProductsRoute from "./routes/products";
 
 export default function App() {
@@ -18,7 +18,8 @@ export default function App() {
         <Route path="/myCart" element={<MyCartRoute />} />
         <Route path="/payment" element={<PaymentRoute />} />
         <Route path="/products" element={<ProductsRoute />} />
-        <Route path="/products/:id" element={<ProductRoute />} />
+        {/* <Route path="/products/:id" element={<ProductRoute />} /> */}
+        <Route path="/product/:id" element={<ProductRoute />} />
       </Routes>
     </BrowserRouter>
   );

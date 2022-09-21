@@ -61,17 +61,21 @@ p {
       padding-right: 20px;
 
       > button {
-        width: 100%;
+        width: 7rem;
         height: 70%;
         background-color: #efeae2;
         border-radius: 5px;
-      }
-      > button > .icon-myCart {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        font-size: 20px;
-        color: black;
+
+        > .icon-myCart {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding-left: 1rem;
+          gap: 1rem;
+          text-decoration: none;
+          font-size: 30px;
+          color: black;
+        }
       }
     }
   }
