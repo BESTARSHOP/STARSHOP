@@ -7,19 +7,22 @@ import MyCartRoute from "./routes/myCart";
 import PaymentRoute from "./routes/payment";
 import ProductRoute from "./routes/products_id";
 import ProductsRoute from "./routes/products";
+import { UserProvieder } from "./hooks/useUser";
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<OverviewRoute />} />
-        <Route path="/account" element={<AccountRoute />} />
-        <Route path="/login" element={<LoginRoute />} />
-        <Route path="/myCart" element={<MyCartRoute />} />
-        <Route path="/payment" element={<PaymentRoute />} />
-        <Route path="/products" element={<ProductsRoute />} />
-        <Route path="/products/:id" element={<ProductRoute />} />
-      </Routes>
-    </BrowserRouter>
+    <UserProvieder>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<OverviewRoute />} />
+          <Route path="/account" element={<AccountRoute />} />
+          <Route path="/login" element={<LoginRoute />} />
+          <Route path="/myCart" element={<MyCartRoute />} />
+          <Route path="/payment" element={<PaymentRoute />} />
+          <Route path="/products" element={<ProductsRoute />} />
+          <Route path="/products/:id" element={<ProductRoute />} />
+        </Routes>
+      </BrowserRouter>
+    </UserProvieder>
   );
 }

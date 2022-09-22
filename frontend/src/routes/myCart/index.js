@@ -3,8 +3,9 @@ import Layout from "../../Layout";
 import { BsCartCheck, BsCartX } from "react-icons/bs";
 import { Button, Container, Col, Row, Table } from "react-bootstrap";
 import { useCart } from "react-use-cart";
-
+import useUser from "../../hooks/useUser";
 export default function MyCart() {
+  const user = useUser();
   const {
     isEmpty,
     items,
@@ -15,7 +16,7 @@ export default function MyCart() {
   } = useCart();
   return (
     <>
-      <Layout></Layout>
+      <Layout> </Layout>
       <Container className="py-4 mt-5">
         <h1 style={{ color: "black" }}>
           {isEmpty ? "Your Cart is Empty" : "The Cart"}

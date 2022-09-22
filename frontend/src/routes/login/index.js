@@ -1,48 +1,40 @@
 import * as React from "react";
 import "./index.scss";
 import Layout from "../../Layout";
+import useUser from "../../hooks/useUser";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [showRegister, setShowRegister] = React.useState(false);
   const [name, setName] = React.useState("");
+  const user = useUser();
+  const navigate = useNavigate();
 
   const handeleLoginClick = async (e) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:3001/user/login", {
-      method: "POST",
-      credentials: "include",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email: email,
-        password: password,
-      }),
+
+    const status = await user.login({
+      email: email,
+      password: password,
     });
-    const result = await res.json();
-    console.log("status", res.status);
-    console.log("result", result);
+    if (status === 200) {
+      navigate("/account");
+    }
   };
 
   const handeleRegisterClick = async (e) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:3001/user/register", {
-      method: "POST",
-      credentials: "include",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email: email,
-        password: password,
-        name: name,
-      }),
+
+    const status = await user.register({
+      email: email,
+      password: password,
+      name: name,
     });
-    const result = await res.json();
-    console.log("status", res.status);
-    console.log("result", result);
+    if (status === 200) {
+      navigate("/account");
+    }
   };
 
   if (showRegister) {
@@ -130,6 +122,8 @@ export default function Login() {
           </div>
 
           <button type="submit">send</button>
+
+          {user.error && <div className="error">{user.error}</div>}
         </form>
       </div>
     </Layout>

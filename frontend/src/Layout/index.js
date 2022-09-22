@@ -2,8 +2,10 @@ import { Link } from "react-router-dom";
 import "./index.scss";
 import { FaUserAlt } from "react-icons/fa";
 import { HiShoppingCart } from "react-icons/hi";
-
+import useUser from "../hooks/useUser";
 export default function Layout(props) {
+  const user = useUser();
+  const accountLink = user.data ? "/account" : "/login";
   return (
     <div className="Layout">
       <header>
@@ -18,8 +20,9 @@ export default function Layout(props) {
             All Products
           </Link>
         </div>
+        {user.data && <h3>{`Hallo ${user.data.name}`}</h3>}
         <div className="header-right">
-          <Link to="/login" className="icon-account">
+          <Link to={accountLink} className="icon-account">
             <FaUserAlt size={35} color="black" />
           </Link>
           <button>
