@@ -19,9 +19,11 @@ import {
   FloatingLabel,
 } from "react-bootstrap";
 import { useCart } from "react-use-cart";
-import { Link } from "react-router-dom";
 
+import { Link } from "react-router-dom";
+import useUser from "../../hooks/useUser";
 export default function MyCart() {
+const user = useUser();
   const { isEmpty, items, cartTotal, emptyCart } = useCart();
 
   return (
@@ -160,6 +162,7 @@ export default function MyCart() {
                     fontWeight: "bold",
                     border: "1px solid black",
                   }}
+
                 >
                   <BiChevronLeft size={35} />
                   continue shopping

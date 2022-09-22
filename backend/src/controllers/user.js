@@ -46,3 +46,27 @@ exports.login = async (req, res, next) => {
   });
   res.status(200).send(user);
 };
+
+exports.getCurrentUser = async (req, res) => {
+  const token = req.cookies["user-token"];
+  if (!token) {
+    return res.status(200).json(null);
+  }
+  const user = await User.findOne().where("token").equals(token);
+  return res.status(200).json(user);
+};
+
+exports.logout = async (req, res) => {
+  const token = req.cookies["user-token"];
+  const user = await User.findOne().where("token").equals(token);
+  if (user) {
+    user.token = "";
+    await user.save();
+  }
+  res.cookie("user-token", "", {
+    maxAge: 90000,
+    sameSite: "strict",
+    httponly: true,
+  });
+  res.status(200).send();
+};
