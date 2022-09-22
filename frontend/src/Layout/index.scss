@@ -38,7 +38,7 @@ p {
       display: flex;
       gap: 1rem;
 
-      > .overview-button,
+      > .home-button,
       .products-button {
         text-decoration: none;
         color: black;
@@ -46,11 +46,11 @@ p {
         padding: 10px 20px;
         border-radius: 5px;
         font-size: x-large;
+        font-weight: 500;
       }
-      > .overview-button:hover,
+      > .home-button:hover,
       .products-button:hover {
         color: brown;
-        font-weight: bolder;
       }
     }
 
@@ -61,17 +61,21 @@ p {
       padding-right: 20px;
 
       > button {
-        width: 100%;
+        width: 7rem;
         height: 70%;
         background-color: #efeae2;
         border-radius: 5px;
-      }
-      > button > .icon-myCart {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        font-size: 20px;
-        color: black;
+
+        > .icon-myCart {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding-left: 1rem;
+          gap: 1rem;
+          text-decoration: none;
+          font-size: 30px;
+          color: black;
+        }
       }
     }
   }

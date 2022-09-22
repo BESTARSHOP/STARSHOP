@@ -1,26 +1,21 @@
 import { Card } from "react-bootstrap";
-import { useCart } from "react-use-cart";
+
 import { Link } from "react-router-dom";
 
 export default function ProductCard(props) {
-  let { image, price, title } = props.data;
-  const { addItem } = useCart();
+  let { id, image, price, title } = props.data;
 
-  const addToCart = (props) => {
-    addItem(props.data);
-  };
   return (
     <Card
       style={{
-        width: "20rem",
-        height: "30rem",
+        width: "19.4rem",
+        height: "32rem",
         backgroundColor: " #ddc9bc",
       }}
       className={`text-center p-0 overflow-hidden shadow mx-auto mb-4`}
     >
       <div
         className={{
-          background: "white",
           height: "15rem",
           overflow: "hidden",
           display: "flex",
@@ -52,24 +47,23 @@ export default function ProductCard(props) {
           Rs. <span className="h3">{price}</span>
         </Card.Title>
         <Link
-          to="/products/:id"
-          onClick={() => addToCart()}
+          to={"/product/" + id}
           className={`d-flex `}
           style={{
             background: "#EFEAE3",
             color: "black",
             border: "solid 1px black",
             borderRadius: "10px",
-            width: "35wh",
-            height: "7vh",
+            width: "10rem",
+            height: "6vh",
             fontSize: "large",
             alignItems: "center",
-            paddingLeft: "1.8rem",
-            margin: "2rem 5rem",
+            paddingLeft: "1.6rem",
+            margin: "2rem 4rem",
             textDecoration: "none",
           }}
         >
-          Buy now
+          View Product
         </Link>
       </Card.Body>
     </Card>

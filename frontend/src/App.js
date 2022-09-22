@@ -5,12 +5,13 @@ import AccountRoute from "./routes/account";
 import LoginRoute from "./routes/login";
 import MyCartRoute from "./routes/myCart";
 import PaymentRoute from "./routes/payment";
-import ProductRoute from "./routes/products_id";
+import ProductRoute from "./routes/product";
 import ProductsRoute from "./routes/products";
 import { UserProvieder } from "./hooks/useUser";
 
 export default function App() {
   return (
+
     <UserProvieder>
       <BrowserRouter>
         <Routes>
@@ -24,5 +25,6 @@ export default function App() {
         </Routes>
       </BrowserRouter>
     </UserProvieder>
+
   );
 }
