@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import "./index.scss";
 import { FaUserAlt } from "react-icons/fa";
-import { HiShoppingCart } from "react-icons/hi";
+import { HiOutlineShoppingBag } from "react-icons/hi";
+import { useCart } from "react-use-cart";
 
 export default function Layout(props) {
+  const { isEmpty, totalItems } = useCart();
+
   return (
     <div className="Layout">
       <header>
@@ -11,7 +14,7 @@ export default function Layout(props) {
           <div className="logo">𝕊𝕋𝔸ℝ 𝕊ℍ𝕆ℙ </div>
         </div>
         <div className="header-center">
-          <Link to="/" className="overview-button">
+          <Link to="/" className="home-button">
             Home
           </Link>
           <Link to="/products" className="products-button">
@@ -24,8 +27,12 @@ export default function Layout(props) {
           </Link>
           <button>
             <Link to="/myCart" className="icon-myCart">
-              <HiShoppingCart size={40} color="black" />
-              <p>Cart (0)</p>
+              <HiOutlineShoppingBag size={40} color="black" />
+
+              {!isEmpty && (
+                <span style={{ position: "relative" }}>{totalItems}</span>
+              )}
+              <span style={{ marginLeft: !isEmpty ? "-13px" : 0 }}></span>
             </Link>
           </button>
         </div>
