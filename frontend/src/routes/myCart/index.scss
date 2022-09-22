@@ -1,15 +1,24 @@
 .payment-boxes {
+  margin-left: 70%;
+  position: fixed;
+  z-index: 10;
+  margin-top: 1rem;
+}
+.boxes {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  float: right;
+  gap: 1.4rem;
+}
+.header {
+  display: flex;
+  gap: 9rem;
 }
 
 .payment1 {
   border: 2px solid black;
   background-color: #ddc9bc;
   width: 30rem;
-  height: 34rem;
+  height: 36rem;
   margin-right: 2rem;
   margin-top: 0;
 
@@ -30,16 +39,39 @@
     width: 85%;
     margin-left: 2rem;
   }
+
+  > .bt-buyNow {
+    padding: 0.5rem;
+    width: 20rem;
+    align-items: center;
+    margin-left: 18%;
+    margin-top: 2rem;
+    background-color: #efeae2;
+    border: 1px solid black;
+    color: black;
+  }
+  > .bt-buyNow:hover {
+    background-color: black !important;
+    color: white;
+    cursor: pointer;
+  }
+
+  > Form {
+    width: 70%;
+    height: auto;
+    margin-left: 2rem;
+  }
 }
 
 .payment2 {
   border: 2px solid black;
   background-color: #ddc9bc;
   width: 30rem;
-  height: 9.7rem;
+  height: 11rem;
   margin-right: 2rem;
   float: right;
   margin-top: 0;
+  padding-top: 0.5rem;
   padding-left: 2rem;
   display: flex;
   flex-direction: column;

@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import { Button, Card } from "react-bootstrap";
 import "./ProductCardDescription.scss";
 import { useCart } from "react-use-cart";
-import { HiShoppingCart } from "react-icons/hi";
-import { FaCartPlus } from "react-icons/fa";
 
 export default function ProductCardDescription(props) {
   const [productData, setProductData] = useState([]);
@@ -21,7 +19,7 @@ export default function ProductCardDescription(props) {
 
   useEffect(() => {
     getResponse();
-  }, []);
+  });
 
   const { addItem } = useCart();
   const addToCart = () => {

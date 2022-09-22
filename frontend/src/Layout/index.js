@@ -14,7 +14,7 @@ export default function Layout(props) {
           <div className="logo">𝕊𝕋𝔸ℝ 𝕊ℍ𝕆ℙ </div>
         </div>
         <div className="header-center">
-          <Link to="/" className="overview-button">
+          <Link to="/" className="home-button">
             Home
           </Link>
           <Link to="/products" className="products-button">

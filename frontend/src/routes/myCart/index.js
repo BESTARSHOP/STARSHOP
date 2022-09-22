@@ -1,7 +1,7 @@
 import "./index.scss";
 import Layout from "../../Layout";
 import { BiChevronLeft } from "react-icons/bi";
-import { RiDeleteBinLine } from "react-icons/ri";
+import { CardItem } from "./CardItem";
 import {
   FaCcPaypal,
   FaCcMastercard,
@@ -9,78 +9,120 @@ import {
   FaCcAmex,
   FaCcDiscover,
 } from "react-icons/fa";
-import { Button, Container, Col, Row, Table } from "react-bootstrap";
+import {
+  Button,
+  Container,
+  Row,
+  Table,
+  Col,
+  Form,
+  FloatingLabel,
+} from "react-bootstrap";
 import { useCart } from "react-use-cart";
 import { Link } from "react-router-dom";
 
 export default function MyCart() {
-  const {
-    isEmpty,
-    items,
-    cartTotal,
-    updateItemQuantity,
-    removeItem,
-    emptyCart,
-  } = useCart();
+  const { isEmpty, items, cartTotal, emptyCart } = useCart();
+
   return (
     <>
       <Layout>
         <div className="payment-boxes">
-          <div className="payment1">
-            <h1 className="h1">Summary</h1>
-            <div className="paragraph">
-              <p>Total Price</p>
-              <p> {cartTotal} $</p>
-            </div>
-            <div className="paragraph">
-              <p>Shipping</p>
-              <p>5,95 $</p>
-            </div>
-            <hr />
-            <div className="paragraph">
-              <p>
-                invoice amount <span className="span">VAT included.</span>
-              </p>
-              <p>{cartTotal + 5.95} $</p>
-            </div>
-          </div>
-          <div className="payment2">
-            <div className="div1">
-              <h6>This is how you can pay</h6>
-              <div className="methods-of-payment">
-                <FaCcPaypal size={40} color="blue" />
-                <FaCcMastercard size={40} color="red" />
-                <FaCcVisa size={40} color="darkblue" />
-                <FaCcAmex size={40} color=" orange" />
-                <FaCcDiscover size={40} color=" grey" />
+          {isEmpty ? (
+            <div></div>
+          ) : (
+            <div className="boxes">
+              <div className="payment1">
+                <h1 className="h1">Summary</h1>
+                <div className="paragraph">
+                  <p>Total Price</p>
+                  <p> {cartTotal} $</p>
+                </div>
+                <div className="paragraph">
+                  <p>Shipping</p>
+                  <p>5,95 $</p>
+                </div>
+                <hr />
+                <div className="paragraph">
+                  <p>
+                    invoice amount <span className="span">VAT included.</span>
+                  </p>
+                  <p>{cartTotal + 5.95} $</p>
+                </div>
+                <hr />
+                <Form>
+                  <Form.Group controlId="formGridAddress1">
+                    <Form.Label>Address</Form.Label>
+                    <Form.Control
+                      placeholder="1234 Main St"
+                      style={{ backgroundColor: " #efeae2" }}
+                    />
+                  </Form.Group>
+                  <Row className="mb-3">
+                    <Form.Group as={Col} controlId="formGridCity">
+                      <Form.Label>City</Form.Label>
+                      <Form.Control style={{ backgroundColor: " #efeae2" }} />
+                    </Form.Group>
+
+                    <Form.Group as={Col}>
+                      <Form.Label>Zip</Form.Label>
+                      <Form.Control style={{ backgroundColor: " #efeae2" }} />
+                    </Form.Group>
+                  </Row>
+                  <FloatingLabel label="Choose your payment method">
+                    <Form.Select style={{ backgroundColor: " #efeae2" }}>
+                      <option value="1">PayPal</option>
+                      <option value="2">Visa</option>
+                      <option value="3">MasterCard</option>
+                      <option value="3">Discover</option>
+                      <option value="3">Amex</option>
+                    </Form.Select>
+                  </FloatingLabel>
+                </Form>
+                <Button className="bt-buyNow"> Buy Now </Button>
+              </div>
+              <div className="payment2">
+                <div className="div1">
+                  <h6>This is how you can pay</h6>
+                  <div className="methods-of-payment">
+                    <FaCcPaypal size={40} color="blue" />
+                    <FaCcMastercard size={40} color="red" />
+                    <FaCcVisa size={40} color="darkblue" />
+                    <FaCcAmex size={40} color=" orange" />
+                    <FaCcDiscover size={40} color=" grey" />
+                  </div>
+                </div>
+                <div className="div2">
+                  <h6>This is how you can have it delivered</h6>
+                  <div className="methods-of-payment2">
+                    <img
+                      src="https://www.wohnkabinen-shop.de/media/image/fd/cc/38/DHL2016.jpg"
+                      alt="DHL "
+                      title="DHL "
+                      className="sc-jOhDuK kAilzX sc-bBrHrO kFHLcB dhl"
+                    ></img>
+                    <img
+                      src="https://www.hermesworld.com/remote/content/logos/hermes-logo-366x183_teaser560x280.jpg"
+                      alt="Hermes"
+                      title="Hermes"
+                      className="sc-jOhDuK kAilzX sc-bBrHrO kFHLcB hermes"
+                    ></img>
+                    <img
+                      src="https://www.logistik-watchblog.de/images/2019/08/gls_logo_1.png"
+                      alt="GLS"
+                      title="GLS"
+                      className="sc-jOhDuK kAilzX sc-bBrHrO kFHLcB gls"
+                    ></img>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="div2">
-              <h6>This is how you can have it delivered</h6>
-              <div className="methods-of-payment2">
-                <img
-                  src="https://www.wohnkabinen-shop.de/media/image/fd/cc/38/DHL2016.jpg"
-                  alt="DHL "
-                  title="DHL "
-                  class="sc-jOhDuK kAilzX sc-bBrHrO kFHLcB dhl"
-                ></img>
-                <img
-                  src="https://www.hermesworld.com/remote/content/logos/hermes-logo-366x183_teaser560x280.jpg"
-                  alt="Hermes"
-                  title="Hermes"
-                  class="sc-jOhDuK kAilzX sc-bBrHrO kFHLcB hermes"
-                ></img>
-                <img
-                  src="https://www.logistik-watchblog.de/images/2019/08/gls_logo_1.png"
-                  alt="GLS"
-                  title="GLS"
-                  class="sc-jOhDuK kAilzX sc-bBrHrO kFHLcB gls"
-                ></img>
-              </div>
-            </div>
-          </div>
+          )}
         </div>
-        <Container className="py-4 mt-5 m-lg-4">
+        <Container
+          className="py-4 mt-5 m-lg-4"
+          style={{ top: "10%", position: "absolute" }}
+        >
           {isEmpty ? (
             <>
               <div
@@ -125,131 +167,23 @@ export default function MyCart() {
               </div>
             </>
           ) : (
-            <h1 style={{ color: "black" }}>The Cart</h1>
+            <div className="header">
+              <h1 style={{ color: "black" }}>The Cart</h1>
+              <Button
+                variant="danger"
+                className="m-2"
+                style={{ width: "10.3rem" }}
+                onClick={() => emptyCart()}
+              >
+                Clear Cart
+              </Button>
+            </div>
           )}
           <Row>
-            <Table
-              responsive="sm"
-              striped
-              bordered
-              hover
-              style={{ marginBottom: "5" }}
-            >
+            <Table responsive="sm" style={{ marginBottom: "5" }}>
               <tbody>
                 {items.map((item, index) => {
-                  return (
-                    <>
-                      <hr style={{ width: "62%" }} />
-                      <div
-                        key={index}
-                        style={{
-                          display: "flex",
-                          width: "100rem",
-                        }}
-                      >
-                        <div
-                          style={{
-                            display: "flex",
-                            justifyContent: "space-between",
-                          }}
-                        >
-                          <img
-                            src={item.image}
-                            style={{ width: "17rem", height: "17rem" }}
-                            alt={item.title}
-                          />
-
-                          <td
-                            style={{
-                              display: "flex",
-                              flexDirection: "column",
-                              justifyContent: "space-between",
-                              margin: "0.5rem 2rem",
-                            }}
-                          >
-                            <h6
-                              style={{
-                                whiteSpace: "wrap",
-                                width: "20rem",
-                                overflow: "hidden",
-                                textOverflow: "ellipsis",
-                                fontWeight: "bolder",
-                                fontSize: "x-large",
-                              }}
-                            >
-                              {item.title}
-                            </h6>
-
-                            <td
-                              style={{
-                                display: "flex",
-                                flexDirection: "column",
-                                justifyContent: "space-between",
-                              }}
-                            >
-                              <div>
-                                Quantity ({item.quantity})
-                                <Button
-                                  style={{
-                                    color: "black",
-                                    background: "#efeae2",
-                                    fontWeight: "bolder",
-                                  }}
-                                  onClick={() =>
-                                    updateItemQuantity(
-                                      item.id,
-                                      item.quantity - 1
-                                    )
-                                  }
-                                  className="ms-2"
-                                >
-                                  -
-                                </Button>
-                                <Button
-                                  style={{
-                                    color: "black",
-                                    background: "#efeae2",
-                                    fontWeight: "bolder",
-                                  }}
-                                  onClick={() =>
-                                    updateItemQuantity(
-                                      item.id,
-                                      item.quantity + 1
-                                    )
-                                  }
-                                  className="ms-2"
-                                >
-                                  +
-                                </Button>
-                              </div>
-                            </td>
-                            <Button
-                              variant="danger"
-                              onClick={() => removeItem(item.id)}
-                              style={{
-                                width: "10rem",
-                                display: "flex",
-                                gap: "0.5rem",
-                              }}
-                            >
-                              <RiDeleteBinLine size={20} />
-                              Remove Item
-                            </Button>
-                          </td>
-                        </div>
-                        <div
-                          style={{
-                            width: "20rem",
-                            textAlign: "right",
-                            padding: "2.5rem",
-                            fontWeight: "bolder",
-                          }}
-                        >
-                          {item.price} $
-                        </div>
-                      </div>
-                    </>
-                  );
+                  return <CardItem index={index} item={item} key={index} />;
                 })}
               </tbody>
             </Table>
@@ -262,21 +196,7 @@ export default function MyCart() {
                   textAlign: "right",
                   width: "65rem",
                 }}
-              >
-                <Col className="p-0">
-                  <Button
-                    variant="danger"
-                    className="m-2"
-                    style={{ width: "10.3rem" }}
-                    onClick={() => emptyCart()}
-                  >
-                    Clear Cart
-                  </Button>
-                </Col>
-                <Col className="py-2">
-                  <h4>Total Price : {cartTotal} $</h4>
-                </Col>
-              </Row>
+              ></Row>
             )}
           </Row>
         </Container>

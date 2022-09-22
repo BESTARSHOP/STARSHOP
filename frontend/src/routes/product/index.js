@@ -3,7 +3,7 @@ import Layout from "../../Layout";
 import { useParams } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import ProductCardDescription from "../../component/ProductCardDescription";
+import ProductCardDescription from "../../components/ProductCardDescription";
 
 export default function Product() {
   const { id } = useParams();

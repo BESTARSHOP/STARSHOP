@@ -8,8 +8,8 @@ export default function ProductCard(props) {
   return (
     <Card
       style={{
-        width: "20rem",
-        height: "30rem",
+        width: "19.4rem",
+        height: "32rem",
         backgroundColor: " #ddc9bc",
       }}
       className={`text-center p-0 overflow-hidden shadow mx-auto mb-4`}
@@ -54,12 +54,12 @@ export default function ProductCard(props) {
             color: "black",
             border: "solid 1px black",
             borderRadius: "10px",
-            width: "35wh",
-            height: "7vh",
+            width: "10rem",
+            height: "6vh",
             fontSize: "large",
             alignItems: "center",
-            paddingLeft: "1.8rem",
-            margin: "2rem 5rem",
+            paddingLeft: "1.6rem",
+            margin: "2rem 4rem",
             textDecoration: "none",
           }}
         >

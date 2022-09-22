@@ -17,8 +17,8 @@
         padding: 10px 20px;
         border-radius: 5px;
         font-size: large;
-        bottom: 30%;
-        margin-left: 160px;
+        bottom: 20%;
+        margin-left: 150px;
         opacity: 0.6;
         font-family: "Cutive Mono", monospace;
         font-weight: bold;
@@ -50,8 +50,8 @@
         padding: 10px 20px;
         border-radius: 5px;
         font-size: large;
-        bottom: 30%;
-        margin-left: 160px;
+        bottom: 20%;
+        margin-left: 120px;
         opacity: 0.6;
         font-family: "Cutive Mono", monospace;
         font-weight: bold;
@@ -82,10 +82,9 @@
         padding: 10px 20px;
         border-radius: 5px;
         font-size: large;
-        bottom: 30%;
+        bottom: 20%;
         margin-top: 90rem;
-
-        margin-left: 160px;
+        margin-left: 140px;
         opacity: 0.6;
         font-family: "Cutive Mono", monospace;
         font-weight: bold;
@@ -130,27 +129,11 @@
         > .footer-icons-instagram {
           color: red;
         }
-
-        > .footer-icons-instagram:hover {
-          transition: 0.5s ease;
-          font-size: xx-large;
-          padding: 10px;
-        }
         > .footer-icons-twitter {
           color: blue;
         }
-        > .footer-icons-twitter:hover {
-          transition: 0.5s ease;
-          font-size: xx-large;
-          padding: 10px;
-        }
         > .footer-icons-facebook {
           color: indigo;
-        }
-        > .footer-icons-facebook:hover {
-          transition: 0.5s ease;
-          font-size: xx-large;
-          padding: 10px;
         }
       }
     }
