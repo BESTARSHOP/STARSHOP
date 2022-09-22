@@ -4,11 +4,11 @@ import { FaUserAlt } from "react-icons/fa";
 
 import { useCart } from "react-use-cart";
 
-import { HiShoppingCart } from "react-icons/hi";
+import { HiOutlineShoppingBag } from "react-icons/hi";
 import useUser from "../hooks/useUser";
 export default function Layout(props) {
   const user = useUser();
-    const { isEmpty, totalItems } = useCart();
+  const { isEmpty, totalItems } = useCart();
 
   const accountLink = user.data ? "/account" : "/login";
 

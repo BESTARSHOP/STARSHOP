@@ -72,6 +72,7 @@ export function UserProvieder(props) {
         method: "POST",
         credentials: "include",
       });
+      setUser(null);
     },
   };
   return (
