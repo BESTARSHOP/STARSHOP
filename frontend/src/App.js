@@ -11,7 +11,6 @@ import { UserProvieder } from "./hooks/useUser";
 
 export default function App() {
   return (
-
     <UserProvieder>
       <BrowserRouter>
         <Routes>
@@ -21,10 +20,9 @@ export default function App() {
           <Route path="/myCart" element={<MyCartRoute />} />
           <Route path="/payment" element={<PaymentRoute />} />
           <Route path="/products" element={<ProductsRoute />} />
-          <Route path="/products/:id" element={<ProductRoute />} />
+          <Route path="/product/:id" element={<ProductRoute />} />
         </Routes>
       </BrowserRouter>
     </UserProvieder>
-
   );
 }
