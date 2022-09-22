@@ -19,7 +19,7 @@ export default function ProductCardDescription(props) {
 
   useEffect(() => {
     getResponse();
-  });
+  }, []);
 
   const { addItem } = useCart();
   const addToCart = () => {
