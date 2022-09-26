@@ -1,12 +1,10 @@
 import "./index.scss";
-import { useState } from "react";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { Button, Form } from "react-bootstrap";
 import { useCart } from "react-use-cart";
 
 export function CardItem(props) {
-  const [value, setValue] = useState("");
-  const { removeItem } = useCart();
+  const { updateItemQuantity, removeItem } = useCart();
 
   return (
     <>
@@ -59,8 +57,10 @@ export function CardItem(props) {
               }}
             >
               <Form.Select
-                value={value}
-                onChange={(event) => setValue(event.target.value)}
+                value={props.item.quantity}
+                onChange={(event) =>
+                  updateItemQuantity(props.item.id, +event.target.value)
+                }
                 style={{
                   width: "7rem",
                 }}
@@ -70,44 +70,43 @@ export function CardItem(props) {
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
+                <option value="5">6</option>
+                <option value="5">7</option>
+                <option value="5">8</option>
+                <option value="5">9</option>
+                <option value="5">10</option>
               </Form.Select>
               {/* <div>
-                                Quantity ({item.quantity})
-                                <Button
-                                  variant="light"
-                                  style={{
-                                    color: "black",
-                                    border: "1px solid black",
-                                    fontWeight: "bolder",
-                                    marginLeft: "1rem",
-                                  }}
-                                  onClick={() =>
-                                    updateItemQuantity(
-                                      item.id,
-                                      item.quantity - 1
-                                    )
-                                  }
-                                >
-                                  -
-                                </Button>
-                                <Button
-                                  variant="light"
-                                  style={{
-                                    color: "black",
-                                    border: "1px solid black",
-                                    fontWeight: "bolder",
-                                    marginLeft: "0.7rem",
-                                  }}
-                                  onClick={() =>
-                                    updateItemQuantity(
-                                      item.id,
-                                      item.quantity + 1
-                                    )
-                                  }
-                                >
-                                  +
-                                </Button>
-                              </div> */}
+                Quantity ({props.item.quantity})
+                <Button
+                  variant="light"
+                  style={{
+                    color: "black",
+                    border: "1px solid black",
+                    fontWeight: "bolder",
+                    marginLeft: "1rem",
+                  }}
+                  onClick={() =>
+                    updateItemQuantity(props.item.id, props.item.quantity - 1)
+                  }
+                >
+                  -
+                </Button>
+                <Button
+                  variant="light"
+                  style={{
+                    color: "black",
+                    border: "1px solid black",
+                    fontWeight: "bolder",
+                    marginLeft: "0.7rem",
+                  }}
+                  onClick={() =>
+                    updateItemQuantity(props.item.id, props.item.quantity + 1)
+                  }
+                >
+                  +
+                </Button>
+              </div> */}
             </td>
             <Button
               variant="danger"
