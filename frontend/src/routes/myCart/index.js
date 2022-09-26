@@ -19,11 +19,9 @@ import {
   FloatingLabel,
 } from "react-bootstrap";
 import { useCart } from "react-use-cart";
-
 import { Link } from "react-router-dom";
-import useUser from "../../hooks/useUser";
+
 export default function MyCart() {
-const user = useUser();
   const { isEmpty, items, cartTotal, emptyCart } = useCart();
 
   return (
@@ -38,7 +36,7 @@ const user = useUser();
                 <h1 className="h1">Summary</h1>
                 <div className="paragraph">
                   <p>Total Price</p>
-                  <p> {cartTotal} $</p>
+                  <p> {cartTotal.toFixed(2)} $</p>
                 </div>
                 <div className="paragraph">
                   <p>Shipping</p>
@@ -49,7 +47,7 @@ const user = useUser();
                   <p>
                     invoice amount <span className="span">VAT included.</span>
                   </p>
-                  <p>{cartTotal + 5.95} $</p>
+                  <p>{(cartTotal + 5.95).toFixed(2)} $</p>
                 </div>
                 <hr />
                 <Form>
@@ -162,7 +160,6 @@ const user = useUser();
                     fontWeight: "bold",
                     border: "1px solid black",
                   }}
-
                 >
                   <BiChevronLeft size={35} />
                   continue shopping

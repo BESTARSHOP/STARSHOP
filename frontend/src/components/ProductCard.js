@@ -1,15 +1,35 @@
 import { Card } from "react-bootstrap";
-
 import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { MDBContainer, MDBRating } from "mdbreact";
 
 export default function ProductCard(props) {
-  let { id, image, price, title } = props.data;
+  let { id, image, price, title, rating } = props.data;
+
+  const [basic] = useState([
+    {
+      tooltip: "Very Bad",
+    },
+    {
+      tooltip: "Poor",
+    },
+    {
+      tooltip: "Ok",
+      choosed: true,
+    },
+    {
+      tooltip: "Good",
+    },
+    {
+      tooltip: "Excellent",
+    },
+  ]);
 
   return (
     <Card
       style={{
         width: "19.4rem",
-        height: "32rem",
+        height: "34rem",
         backgroundColor: " #ddc9bc",
       }}
       className={`text-center p-0 overflow-hidden shadow mx-auto mb-4`}
@@ -46,6 +66,12 @@ export default function ProductCard(props) {
         <Card.Title>
           Rs. <span className="h3">{price}</span>
         </Card.Title>
+        <div style={{ background: "white", width: "8rem", height: "2rem" }}>
+          {/* <MDBContainer>
+            <MDBRating data={basic} />
+          </MDBContainer> */}
+          {rating.rate} ({rating.count})
+        </div>
         <Link
           to={"/product/" + id}
           className={`d-flex `}

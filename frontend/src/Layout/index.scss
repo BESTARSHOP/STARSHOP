@@ -60,6 +60,10 @@ p {
       gap: 1rem;
       padding-right: 20px;
 
+      > h3 {
+        margin-top: 0.7rem;
+      }
+
       > button {
         width: 7rem;
         height: 70%;
