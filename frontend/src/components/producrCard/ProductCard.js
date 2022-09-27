@@ -1,29 +1,11 @@
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
-import { MDBContainer, MDBRating } from "mdbreact";
+import React from "react";
+import StarRating from "../StarRating/StarRating";
+import "./productCard.scss";
 
 export default function ProductCard(props) {
   let { id, image, price, title, rating } = props.data;
-
-  const [basic] = useState([
-    {
-      tooltip: "Very Bad",
-    },
-    {
-      tooltip: "Poor",
-    },
-    {
-      tooltip: "Ok",
-      choosed: true,
-    },
-    {
-      tooltip: "Good",
-    },
-    {
-      tooltip: "Excellent",
-    },
-  ]);
 
   return (
     <Card
@@ -66,11 +48,11 @@ export default function ProductCard(props) {
         <Card.Title>
           Rs. <span className="h3">{price}</span>
         </Card.Title>
-        <div style={{ background: "white", width: "8rem", height: "2rem" }}>
-          {/* <MDBContainer>
-            <MDBRating data={basic} />
-          </MDBContainer> */}
-          {rating.rate} ({rating.count})
+        <div className="starBG">
+          <div>
+            <StarRating />
+          </div>
+          <div>({rating.count})</div>
         </div>
         <Link
           to={"/product/" + id}

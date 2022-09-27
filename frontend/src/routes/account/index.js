@@ -2,6 +2,7 @@ import "./index.scss";
 import Layout from "../../Layout";
 import useUser from "../../hooks/useUser";
 import { useNavigate } from "react-router-dom";
+import { FaUserAlt } from "react-icons/fa";
 
 export default function Account() {
   const user = useUser();
@@ -104,12 +105,86 @@ export default function Account() {
                   </button>
                 </div>
               </div>
+              <div>
+                <div style={{ marginTop: "3rem" }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "3rem",
+                    }}
+                  >
+                    <h4>Upload your profile photo</h4>
+                    <div
+                      class="text-center"
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "1rem",
+                      }}
+                    >
+                      <div
+                        class="square position-relative display-2 mb-3"
+                        style={{
+                          border: "1px ",
+                          width: "19rem",
+                          height: "15rem",
+                          background: "#FFFFFF",
+                        }}
+                      >
+                        <FaUserAlt
+                          size={120}
+                          class=" text-secondary"
+                          style={{ marginTop: "4rem" }}
+                        />
+                      </div>
+
+                      {/* <input type="file" id="customFile" /> */}
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "row",
+                          gap: "1rem",
+                          marginLeft: "4.3rem",
+                        }}
+                      >
+                        <label
+                          class="btn btn-success-soft btn-block"
+                          for="customFile"
+                          style={{
+                            color: "#28a745",
+                            backgroundColor: "rgba(40, 167, 69, 0.1)",
+                          }}
+                        >
+                          Upload
+                        </label>
+                        <button
+                          type="button"
+                          class="btn btn-danger-soft"
+                          style={{
+                            color: "#dc3545",
+                            backgroundColor: "rgba(220, 53, 69, 0.1)",
+                          }}
+                        >
+                          Remove
+                        </button>
+                      </div>
+
+                      <p class="text-muted mt-3 mb-0">
+                        <span class="me-1">Note:</span>Minimum size 300px x
+                        300px
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <button
                 onClick={handleLogout}
                 style={{
                   width: "12rem",
                   height: "3rem",
                   marginTop: "1.5rem",
+                  marginLeft: "4rem",
                   background: "#DDC9BC",
                 }}
               >

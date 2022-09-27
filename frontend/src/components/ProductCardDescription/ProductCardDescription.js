@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button, Card } from "react-bootstrap";
 import "./ProductCardDescription.scss";
 import { useCart } from "react-use-cart";
+import StarRating from "../StarRating/StarRating";
 
 export default function ProductCardDescription(props) {
   const [productData, setProductData] = useState([]);
@@ -30,10 +31,9 @@ export default function ProductCardDescription(props) {
     <div className="context">
       <Card.Img
         src={productData.image}
-        style={{ width: "40rem", height: "45rem" }}
+        style={{ width: "35rem", height: "40rem" }}
         className="card-img"
       />
-
       <Card className="card">
         <Card.Body className="card-body">
           <Card.Title>
@@ -44,15 +44,19 @@ export default function ProductCardDescription(props) {
             <br />
             <span className="h3">{productData.price} $ </span>
             <p className="costs">incl. VAT., excl. Shipping costs</p>
+            <div className="rating">
+              <div>
+                <StarRating />
+              </div>
+              <div>{productData.rating?.rate}</div>
+            </div>
           </Card.Title>
           <div className="buttons">
             <Link to="/myCart" id="link-go-to-card">
               Go to Cart
-              {/* <HiShoppingCart size={25} /> */}
             </Link>
             <Button onClick={() => addToCart()} id="link-add-to-card">
               Add to Cart
-              {/* <FaCartPlus size={25} /> */}
             </Button>
           </div>
         </Card.Body>
