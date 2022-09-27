@@ -76,37 +76,6 @@ export function CardItem(props) {
                 <option value="5">9</option>
                 <option value="5">10</option>
               </Form.Select>
-              {/* <div>
-                Quantity ({props.item.quantity})
-                <Button
-                  variant="light"
-                  style={{
-                    color: "black",
-                    border: "1px solid black",
-                    fontWeight: "bolder",
-                    marginLeft: "1rem",
-                  }}
-                  onClick={() =>
-                    updateItemQuantity(props.item.id, props.item.quantity - 1)
-                  }
-                >
-                  -
-                </Button>
-                <Button
-                  variant="light"
-                  style={{
-                    color: "black",
-                    border: "1px solid black",
-                    fontWeight: "bolder",
-                    marginLeft: "0.7rem",
-                  }}
-                  onClick={() =>
-                    updateItemQuantity(props.item.id, props.item.quantity + 1)
-                  }
-                >
-                  +
-                </Button>
-              </div> */}
             </td>
             <Button
               variant="danger"
@@ -130,7 +99,7 @@ export function CardItem(props) {
             fontWeight: "bolder",
           }}
         >
-          {props.item.price} $
+          {props.item.price * props.item.quantity} $
         </div>
       </div>
     </>
