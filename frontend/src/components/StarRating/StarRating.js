@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import "./starRating.scss";
 
-export default function StarRating() {
+export default function StarRating(props) {
   const [rating, setRating] = useState(null);
+  console.log(props.rating, rating);
   const [hover, setHover] = useState(null);
+
+  useEffect(() => {
+    setRating(props.rating);
+  }, [props.rating]);
 
   return (
     <>
@@ -21,8 +26,9 @@ export default function StarRating() {
             <FaStar
               className="star"
               size={25}
-              color={ratingValue <= (hover || rating) ? "#ffc107" : "#e4e5e9"}
-              // #e4e5e9
+              color={
+                ratingValue <= (hover || rating) ? "#A52A2A" : "lightyellow"
+              }
               onMouseEnter={() => setHover(ratingValue)}
               onMouseLeave={() => setHover(null)}
             />

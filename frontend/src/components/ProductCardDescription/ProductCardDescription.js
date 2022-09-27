@@ -46,7 +46,7 @@ export default function ProductCardDescription(props) {
             <p className="costs">incl. VAT., excl. Shipping costs</p>
             <div className="rating">
               <div>
-                <StarRating />
+                <StarRating rating={productData.rating?.rate} />
               </div>
               <div>{productData.rating?.rate}</div>
             </div>

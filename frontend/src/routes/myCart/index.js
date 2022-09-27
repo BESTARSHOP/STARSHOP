@@ -13,7 +13,6 @@ import {
   Button,
   Container,
   Row,
-  Table,
   Col,
   Form,
   FloatingLabel,
@@ -79,7 +78,9 @@ export default function MyCart() {
                     </Form.Select>
                   </FloatingLabel>
                 </Form>
-                <Button className="bt-buyNow"> Buy Now </Button>
+                <Link to={"/order/"} className="bt-buyNow">
+                  Buy Now
+                </Link>
               </div>
               <div className="payment2">
                 <div className="div1">
@@ -180,13 +181,13 @@ export default function MyCart() {
             </div>
           )}
           <Row>
-            <Table responsive="sm" style={{ marginBottom: "5" }}>
-              <tbody>
+            <div responsive="sm" style={{ marginBottom: "5" }}>
+              <div>
                 {items.map((item, index) => {
                   return <CardItem index={index} item={item} key={index} />;
                 })}
-              </tbody>
-            </Table>
+              </div>
+            </div>
             {!isEmpty && (
               <Row
                 style={{

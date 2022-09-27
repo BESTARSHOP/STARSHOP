@@ -1,46 +1,59 @@
 .overview {
+  background: #efeae2;
   > .products-fotos {
     display: flex;
     > .logo-1 {
-      background-image: url(../../images/depositphotos_64958773-stock-photo-fashion-couple-posing-on-grey.jpg);
+      background-image: url(../../images/78932a1d96aaab8776e62f8bdeb3a00b.jpg);
       background-repeat: no-repeat;
       background-position: center;
-      background-size: cover;
+      background-size: contain;
       width: 100%;
       height: 75vh;
+      transition: 0.5s ease-in-out;
 
       > .view-button-1 {
         position: absolute;
         text-decoration: none;
         color: black;
-        background: #efeae2;
+        background: #efede2;
         padding: 10px 20px;
         border-radius: 5px;
-        font-size: large;
+        font-size: medium;
         bottom: 20%;
-        margin-left: 150px;
+        margin-left: 120px;
         opacity: 0.6;
         font-family: "Cutive Mono", monospace;
         font-weight: bold;
+        transition: 0.5s ease;
       }
       > .view-button-1:hover {
         opacity: 1;
-        transition: 0.5s ease;
-        font-size: x-large;
-        box-shadow: 3px 3px 20px;
-        padding: 10px;
-        transition: 0.5s ease;
-        background: #efeae2;
       }
     }
-    > .logo-2 {
-      background-image: url(../../images/a1878c73a8a3173cf4fa9742307ecbef.jpg);
+    > .logo-1:hover {
+      background-image: url(../../images/b226ca64996e3288ed5f98158557e722--white-shoes-white-sneakers-for-men.jpg);
 
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      width: 100%;
+      height: 75vh;
+    }
+
+    > .twoImages {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+      margin-top: 1rem;
+    }
+    > .twoImages > .logo-2 {
+      background-image: url(../../images/hero-image.webp);
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
       width: 100%;
-      height: 75vh;
+      height: 35vh;
 
       > .view-button-2 {
         position: absolute;
@@ -49,9 +62,9 @@
         background: #efeae2;
         padding: 10px 20px;
         border-radius: 5px;
-        font-size: large;
-        bottom: 20%;
-        margin-left: 120px;
+        font-size: medium;
+        top: 40%;
+        margin-left: 130px;
         opacity: 0.6;
         font-family: "Cutive Mono", monospace;
         font-weight: bold;
@@ -59,20 +72,30 @@
       > .view-button-2:hover {
         opacity: 1;
         transition: 0.5s ease;
-        font-size: x-large;
+        font-size: large;
         box-shadow: 3px 3px 20px;
         padding: 10px;
         transition: 0.5s ease;
         background: #efeae2;
       }
     }
-    > .logo-3 {
-      background-image: url(../../images/interior-define-charly-ecru.jpg);
+    > .twoImages > .logo-2:hover {
+      background-image: url(../../images/laptop-1280536_960_720.webp);
+      transition: 0.5s ease;
       background-repeat: no-repeat;
-      // position: relative;
+      background-position: center;
       background-size: cover;
       width: 100%;
-      height: 75vh;
+      height: 35vh;
+    }
+
+    > .twoImages > .logo-3 {
+      background-image: url(../../images/photo-1606760227091-3dd870d97f1d.jpeg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 35vh;
 
       > .view-button-3 {
         position: absolute;
@@ -81,10 +104,9 @@
         background: #efeae2;
         padding: 10px 20px;
         border-radius: 5px;
-        font-size: large;
+        font-size: medium;
         bottom: 20%;
-        margin-top: 90rem;
-        margin-left: 140px;
+        margin-left: 130px;
         opacity: 0.6;
         font-family: "Cutive Mono", monospace;
         font-weight: bold;
@@ -92,12 +114,64 @@
       > .view-button-3:hover {
         opacity: 1;
         transition: 0.5s ease;
-        font-size: x-large;
+        font-size: large;
         box-shadow: 3px 3px 20px;
         padding: 10px;
         transition: 0.5s ease;
         background: #efeae2;
       }
+    }
+    > .twoImages > .logo-3:hover {
+      background-image: url(../../images/photo-1571974096035-bc3568627608.jpeg);
+      transition: 0.5s ease;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 35vh;
+    }
+
+    > .logo-4 {
+      background-image: url(../../images/d3bb70c98cecbcd6c1c6e95624b6de9d.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      width: 100%;
+      height: 75vh;
+
+      > .view-button-4 {
+        position: absolute;
+        text-decoration: none;
+        color: black;
+        background: #efeae2;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: medium;
+        bottom: 20%;
+        margin-top: 90rem;
+        margin-left: 120px;
+        opacity: 0.6;
+        font-family: "Cutive Mono", monospace;
+        font-weight: bold;
+      }
+      > .view-button-4:hover {
+        opacity: 1;
+        transition: 0.5s ease;
+        font-size: large;
+        box-shadow: 3px 3px 20px;
+        padding: 10px;
+        transition: 0.5s ease;
+        background: #efeae2;
+      }
+    }
+    > .logo-4:hover {
+      background-image: url(../../images/861fb89e90eac58c5e5879493c02721e.jpg);
+      transition: 0.5s ease;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      width: 100%;
+      height: 75vh;
     }
   }
 
