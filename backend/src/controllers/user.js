@@ -13,7 +13,7 @@ exports.register = async (req, res) => {
   await user.save();
 
   res.cookie("user-token", user.token, {
-    maxAge: 90000,
+    maxAge: 10 * 60 * 1000,
     sameSite: "strict",
     httponly: true,
   });

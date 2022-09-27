@@ -1,6 +1,6 @@
 .payment-boxes {
   margin-left: 70%;
-  position: fixed;
+  position: sticky;
   z-index: 10;
   margin-top: 1rem;
 }
@@ -41,14 +41,17 @@
   }
 
   > .bt-buyNow {
-    padding: 0.5rem;
+    position: absolute;
     width: 20rem;
+    margin-top: 5%;
     align-items: center;
-    margin-left: 18%;
-    margin-top: 2rem;
+    margin-left: 16%;
+    padding: 0.5rem;
     background-color: #efeae2;
     border: 1px solid black;
     color: black;
+    text-decoration: none;
+    text-align: center;
   }
   > .bt-buyNow:hover {
     background-color: black !important;
