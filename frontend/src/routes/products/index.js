@@ -6,6 +6,7 @@ import { Row, Col, InputGroup } from "react-bootstrap";
 import SearchFilter from "react-filter-search";
 import ProductCard from "../../components/producrCard/ProductCard";
 import { useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Products() {
   const [searchInput, setSearchInput] = useState("");
@@ -34,47 +35,51 @@ export default function Products() {
   };
   useEffect(() => {
     if (id) filterProduct(parseInt(id));
-  }, [id, productData]);
-
+  }, []);
   // "category": {
-  //   id:1
-  //   name: "men's clothing",}
+  //   "id":1,
+  //   "name": "men's clothing" }
 
   return (
     <>
       <Layout>
         <div className="products">
           <div className="products-buttons">
-            <button
+            <NavLink
               className="button products-All-button"
               onClick={() => setFilter(productData)}
+              to="/products"
             >
               All
-            </button>
-            <button
+            </NavLink>
+            <NavLink
               className="button products-men-button"
               onClick={() => filterProduct("men's clothing")}
+              to="/products/men's clothing"
             >
               men's clothing
-            </button>
-            <button
+            </NavLink>
+            <NavLink
               className="button products-women-button"
               onClick={() => filterProduct("women's clothing")}
+              to="/products/women's clothing"
             >
               women's clothing
-            </button>
-            <button
+            </NavLink>
+            <NavLink
               className="button products-women-button"
               onClick={() => filterProduct("electronics")}
+              to="/products/electronics"
             >
               electronics
-            </button>
-            <button
+            </NavLink>
+            <NavLink
               className="button products-women-button"
               onClick={() => filterProduct("jewelery")}
+              to="/products/jewelery"
             >
               jewelery
-            </button>
+            </NavLink>
           </div>
 
           <Row id="row" className="justify-content-center ">
