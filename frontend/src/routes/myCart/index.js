@@ -79,7 +79,7 @@ export default function MyCart() {
                   </FloatingLabel>
                 </Form>
                 <Link to={"/order/"} className="bt-buyNow">
-                  Buy Now
+                  To Checkout
                 </Link>
               </div>
               <div className="payment2">

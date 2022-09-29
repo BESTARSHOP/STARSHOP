@@ -16,9 +16,12 @@
       font-weight: bold;
       width: 13rem;
       margin-top: 2rem;
+      text-decoration: none;
+      border: 1px solid black;
+      text-align: center;
     }
     > .button:hover {
-      background-color: rgb(160, 82, 82);
+      background-color: #a3693d;
       color: white;
       transition: 0.5s ease;
       box-shadow: 3px 3px 20px black;

@@ -4,7 +4,6 @@ import "./starRating.scss";
 
 export default function StarRating(props) {
   const [rating, setRating] = useState(null);
-  console.log(props.rating, rating);
   const [hover, setHover] = useState(null);
 
   useEffect(() => {
@@ -26,9 +25,7 @@ export default function StarRating(props) {
             <FaStar
               className="star"
               size={25}
-              color={
-                ratingValue <= (hover || rating) ? "#A52A2A" : "lightyellow"
-              }
+              color={ratingValue <= (hover || rating) ? "gold" : "lightyellow"}
               onMouseEnter={() => setHover(ratingValue)}
               onMouseLeave={() => setHover(null)}
             />

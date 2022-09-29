@@ -46,11 +46,14 @@ export default function ProductCard(props) {
           {title}
         </Card.Title>
         <Card.Title>
-          Rs. <span className="h3">{price}</span>
+          <span className="h4">{price} $</span>
         </Card.Title>
         <div className="starBG">
-          <div>
-            <StarRating />
+          <div style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
+            <div>
+              <StarRating rating={rating?.rate} />
+            </div>
+            <div>{rating.rate}</div>
           </div>
           <div>({rating.count})</div>
         </div>
