@@ -24,7 +24,7 @@ app.use("/cart", require("./src/routes/cart"));
 app.use("/products", require("./src/routes/products"));
 
 app.use((req, res, next) => {
-  const error = new Error("Nicht gefunden");
+  const error = new Error("Not found");
   error.status = 404;
   next(error);
 });

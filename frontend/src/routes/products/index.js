@@ -16,7 +16,7 @@ export default function Products() {
   const search = window.location.search;
 
   async function getResponse() {
-    const res = await fetch("https://fakestoreapi.com/products").then((res) =>
+    const res = await fetch("http://localhost:3001/products").then((res) =>
       res.json()
     );
     setProductData(res);

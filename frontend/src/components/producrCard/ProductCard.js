@@ -1,11 +1,11 @@
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import React from "react";
 import StarRating from "../StarRating/StarRating";
 import "./productCard.scss";
+import React from "react";
 
 export default function ProductCard(props) {
-  let { id, image, price, title, rating } = props.data;
+  let { _id, image, price, title, rating } = props.data;
 
   return (
     <Card
@@ -55,7 +55,7 @@ export default function ProductCard(props) {
           <div>({rating.count})</div>
         </div>
         <Link
-          to={"/product/" + id}
+          to={"/product/" + _id}
           className={`d-flex `}
           style={{
             background: "#EFEAE3",
