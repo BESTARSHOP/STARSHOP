@@ -17,7 +17,6 @@ export default function ProductCardDescription(props) {
       (res) => res.json()
     );
     setProductData(res);
-    console.log(res);
   }
 
   useEffect(() => {

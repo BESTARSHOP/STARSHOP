@@ -12,24 +12,27 @@ export default function Overview() {
       <div className="overview">
         <div className="products-fotos">
           <div className="logo-1">
-            <Link to="/products" className="view-button-1">
+            <Link
+              to="/products/?category=men's clothing"
+              className="view-button-1"
+            >
               VIEW MEN'S CLOTHES PRODUCTS
             </Link>
           </div>
           <div className="twoImages">
             <div className="logo-2">
-              <Link to="/products/1" className="view-button-2">
+              <Link to="/products/electronics" className="view-button-2">
                 VIEW ELECTRONICS PRODUCTS
               </Link>
             </div>
             <div className="logo-3">
-              <Link to="/products/:id" className="view-button-3">
+              <Link to="/products/jewelery" className="view-button-3">
                 VIEW ACCESSORY PRODUCTS
               </Link>
             </div>
           </div>
           <div className="logo-4">
-            <Link to="/products/:id" className="view-button-4">
+            <Link to="/products/women's clothing" className="view-button-4">
               VIEW WOMEN'S CLOTHES PRODUCTS
             </Link>
           </div>
