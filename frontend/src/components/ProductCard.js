@@ -1,10 +1,10 @@
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
-import { MDBContainer, MDBRating } from "mdbreact";
+// import { MDBContainer, MDBRating } from "mdbreact";
 
 export default function ProductCard(props) {
-  let { id, image, price, title, rating } = props.data;
+  let { _id, image, price, title, rating } = props.data;
 
   const [basic] = useState([
     {
@@ -73,7 +73,7 @@ export default function ProductCard(props) {
           {rating.rate} ({rating.count})
         </div>
         <Link
-          to={"/product/" + id}
+          to={"/product/" + _id}
           className={`d-flex `}
           style={{
             background: "#EFEAE3",

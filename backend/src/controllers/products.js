@@ -1,7 +1,16 @@
-exports.getProducts = (req, res, next) => {
-  throw new Error("not implemented");
+const Product = require("../models/product");
+exports.getProducts = async (req, res, next) => {
+  const liste = await Product.find();
+  res.status(200).send(liste);
 };
 
-exports.getProductById = (req, res, next) => {
-  throw new Error("not implemented");
+exports.getProductById = async (req, res, next) => {
+  const id = req.params.id;
+  const product = await Product.findById(id);
+  if (!product) {
+    const error = new Error("there is no Product");
+    error.status = 400;
+    return next(error);
+  }
+  res.status(200).send(product);
 };

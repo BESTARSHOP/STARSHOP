@@ -6,11 +6,13 @@ import { useCart } from "react-use-cart";
 
 export default function ProductCardDescription(props) {
   const [productData, setProductData] = useState([]);
-
+  const [price, setPrice] = useState();
+  const [title, setTitle] = useState();
+  const [error, setError] = useState();
   const id = props.id;
 
   async function getResponse() {
-    const res = await fetch(`https://fakestoreapi.com/products/${id}`).then(
+    const res = await fetch(`http://localhost:3001/products/${id}`).then(
       (res) => res.json()
     );
     setProductData(res);
@@ -22,8 +24,24 @@ export default function ProductCardDescription(props) {
   }, []);
 
   const { addItem } = useCart();
-  const addToCart = () => {
-    addItem(productData);
+  const addToCart = async () => {
+    // addItem(productData);
+    const res = await fetch("http://localhost:3001/cart/addProduct", {
+      method: "POST",
+      credentials: "include",
+      headres: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ title: title, price: price }),
+    });
+    const result = await res.json();
+    if (res.status === 200) {
+      addItem(productData);
+    } else if (result.errors) {
+      setError(result.errors[0].msg);
+    } else if (result.error) {
+      setError(result.error);
+    }
   };
 
   return (
@@ -54,6 +72,7 @@ export default function ProductCardDescription(props) {
               Add to Cart
               {/* <FaCartPlus size={25} /> */}
             </Button>
+            {error && <div className="error">{error}</div>}
           </div>
         </Card.Body>
       </Card>
