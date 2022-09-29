@@ -34,7 +34,13 @@ export default function Order() {
           <div className="payment">
             <div className="div">
               <h6>Delivery To: </h6>
-              <h6>Delivery: November 1, 2022 - November 6, 2022</h6>
+              <div className="deliveryToArea">
+                <p>street 1</p>
+                <p>11111 city</p>
+              </div>
+              <h6 className="deliveryArea">
+                Delivery: November 1, 2022 - November 6, 2022
+              </h6>
             </div>
           </div>
           <div className="paymentTwo">

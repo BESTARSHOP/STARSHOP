@@ -86,6 +86,15 @@
       display: flex;
       flex-direction: column;
       gap: 2rem;
+      padding-top: 1rem;
+
+      > .deliveryToArea {
+        padding-left: 7rem;
+      }
+
+      > .deliveryArea {
+        color: brown;
+      }
     }
   }
 

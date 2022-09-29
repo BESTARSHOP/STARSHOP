@@ -12,7 +12,10 @@ export default function Overview() {
       <div className="overview">
         <div className="products-fotos">
           <div className="logo-1">
-            <Link to="/products/men's clothing" className="view-button-1">
+            <Link
+              to="/products/?category=men's clothing"
+              className="view-button-1"
+            >
               VIEW MEN'S CLOTHES PRODUCTS
             </Link>
           </div>

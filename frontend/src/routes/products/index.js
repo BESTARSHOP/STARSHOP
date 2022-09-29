@@ -6,27 +6,28 @@ import { Row, Col, InputGroup } from "react-bootstrap";
 import SearchFilter from "react-filter-search";
 import ProductCard from "../../components/producrCard/ProductCard";
 import { useParams } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
 export default function Products() {
   const [searchInput, setSearchInput] = useState("");
   const [productData, setProductData] = useState([]);
   const [filter, setFilter] = useState(productData);
+  const [params] = useSearchParams();
+  const [category, setCategory] = useState(params.category || "");
 
   const { id } = useParams();
-  const search = window.location.search;
 
   async function getResponse() {
-    const res = await fetch("https://fakestoreapi.com/products").then((res) =>
-      res.json()
-    );
+    const res = await fetch(
+      "https://fakestoreapi.com/products?category=" + category
+    ).then((res) => res.json());
     setProductData(res);
     setFilter(res);
   }
 
   useEffect(() => {
     getResponse();
-  }, []);
+  }, [category]);
 
   const filterProduct = (cat) => {
     const results = productData.filter((x) => x.category === cat);
@@ -45,41 +46,36 @@ export default function Products() {
       <Layout>
         <div className="products">
           <div className="products-buttons">
-            <NavLink
+            <button
               className="button products-All-button"
-              onClick={() => setFilter(productData)}
-              to="/products"
+              onClick={() => setCategory("")}
             >
               All
-            </NavLink>
-            <NavLink
+            </button>
+            <button
               className="button products-men-button"
-              onClick={() => filterProduct("men's clothing")}
-              to="/products/men's clothing"
+              onClick={() => setCategory("men's clothing")}
             >
               men's clothing
-            </NavLink>
-            <NavLink
+            </button>
+            <button
               className="button products-women-button"
-              onClick={() => filterProduct("women's clothing")}
-              to="/products/women's clothing"
+              onClick={() => setCategory("women's clothing")}
             >
               women's clothing
-            </NavLink>
-            <NavLink
+            </button>
+            <button
               className="button products-women-button"
-              onClick={() => filterProduct("electronics")}
-              to="/products/electronics"
+              onClick={() => setCategory("electronics")}
             >
               electronics
-            </NavLink>
-            <NavLink
+            </button>
+            <button
               className="button products-women-button"
-              onClick={() => filterProduct("jewelery")}
-              to="/products/jewelery"
+              onClick={() => setCategory("jewelery")}
             >
               jewelery
-            </NavLink>
+            </button>
           </div>
 
           <Row id="row" className="justify-content-center ">
