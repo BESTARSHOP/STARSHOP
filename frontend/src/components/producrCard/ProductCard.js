@@ -1,29 +1,11 @@
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
-import { MDBContainer, MDBRating } from "mdbreact";
+import StarRating from "../StarRating/StarRating";
+import "./productCard.scss";
+import React from "react";
 
 export default function ProductCard(props) {
-  let { id, image, price, title, rating } = props.data;
-
-  const [basic] = useState([
-    {
-      tooltip: "Very Bad",
-    },
-    {
-      tooltip: "Poor",
-    },
-    {
-      tooltip: "Ok",
-      choosed: true,
-    },
-    {
-      tooltip: "Good",
-    },
-    {
-      tooltip: "Excellent",
-    },
-  ]);
+  let { _id, image, price, title, rating } = props.data;
 
   return (
     <Card
@@ -64,16 +46,19 @@ export default function ProductCard(props) {
           {title}
         </Card.Title>
         <Card.Title>
-          Rs. <span className="h3">{price}</span>
+          <span className="h4">{price} $</span>
         </Card.Title>
-        <div style={{ background: "white", width: "8rem", height: "2rem" }}>
-          {/* <MDBContainer>
-            <MDBRating data={basic} />
-          </MDBContainer> */}
-          {rating.rate} ({rating.count})
+        <div className="starBG">
+          <div style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
+            <div>
+              <StarRating rating={rating?.rate} />
+            </div>
+            <div>{rating.rate}</div>
+          </div>
+          <div>({rating.count})</div>
         </div>
         <Link
-          to={"/product/" + id}
+          to={"/product/" + _id}
           className={`d-flex `}
           style={{
             background: "#EFEAE3",

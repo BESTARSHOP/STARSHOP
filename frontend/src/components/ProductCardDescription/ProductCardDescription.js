@@ -3,18 +3,20 @@ import { Link } from "react-router-dom";
 import { Button, Card } from "react-bootstrap";
 import "./ProductCardDescription.scss";
 import { useCart } from "react-use-cart";
+import StarRating from "../StarRating/StarRating";
 
 export default function ProductCardDescription(props) {
   const [productData, setProductData] = useState([]);
-
+  const [price, setPrice] = useState();
+  const [title, setTitle] = useState();
+  const [error, setError] = useState();
   const id = props.id;
 
   async function getResponse() {
-    const res = await fetch(`https://fakestoreapi.com/products/${id}`).then(
+    const res = await fetch(`http://localhost:3001/products/${id}`).then(
       (res) => res.json()
     );
     setProductData(res);
-    console.log(res);
   }
 
   useEffect(() => {
@@ -22,18 +24,33 @@ export default function ProductCardDescription(props) {
   }, []);
 
   const { addItem } = useCart();
-  const addToCart = () => {
-    addItem(productData);
+  const addToCart = async () => {
+    // addItem(productData);
+    const res = await fetch("http://localhost:3001/cart/addProduct", {
+      method: "POST",
+      credentials: "include",
+      headres: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ title: title, price: price }),
+    });
+    const result = await res.json();
+    if (res.status === 200) {
+      addItem(productData);
+    } else if (result.errors) {
+      setError(result.errors[0].msg);
+    } else if (result.error) {
+      setError(result.error);
+    }
   };
 
   return (
     <div className="context">
       <Card.Img
         src={productData.image}
-        style={{ width: "40rem", height: "45rem" }}
+        style={{ width: "35rem", height: "40rem" }}
         className="card-img"
       />
-
       <Card className="card">
         <Card.Body className="card-body">
           <Card.Title>
@@ -44,16 +61,21 @@ export default function ProductCardDescription(props) {
             <br />
             <span className="h3">{productData.price} $ </span>
             <p className="costs">incl. VAT., excl. Shipping costs</p>
+            <div className="rating">
+              <div>
+                <StarRating rating={productData.rating?.rate} />
+              </div>
+              <div>{productData.rating?.rate}</div>
+            </div>
           </Card.Title>
           <div className="buttons">
             <Link to="/myCart" id="link-go-to-card">
               Go to Cart
-              {/* <HiShoppingCart size={25} /> */}
             </Link>
             <Button onClick={() => addToCart()} id="link-add-to-card">
               Add to Cart
-              {/* <FaCartPlus size={25} /> */}
             </Button>
+            {error && <div className="error">{error}</div>}
           </div>
         </Card.Body>
       </Card>

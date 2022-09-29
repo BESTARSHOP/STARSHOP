@@ -1,0 +1,155 @@
+.allBoxes {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.myOrders {
+  margin-left: 9rem;
+  margin-top: 2rem;
+}
+
+.listGroup {
+  background-color: #efeae2 !important;
+  display: flex;
+  padding: 1rem;
+
+  > .cartInfo {
+    display: flex;
+    border: 1px solid black;
+    width: 50rem;
+    margin-left: 9rem;
+
+    > .img-Titel {
+      display: flex;
+      padding: 1rem 1rem;
+
+      > img {
+        width: 5rem;
+        height: 5rem;
+      }
+
+      > .titelInfo {
+        padding-left: 1rem;
+
+        > p {
+          white-space: wrap;
+          width: 10rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-weight: bolder;
+          font-size: medium;
+        }
+      }
+    }
+
+    > .priceInfo {
+      width: 20rem;
+      text-align: right;
+      padding: 2.5rem;
+      font-weight: bolder;
+    }
+    > .quantityInfo {
+      width: 20rem;
+      text-align: right;
+      padding: 2.5rem;
+      font-weight: bolder;
+    }
+
+    > p {
+      margin-top: 2rem;
+    }
+  }
+}
+
+.towBoxesPayment {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: fixed;
+  margin-left: 70%;
+
+  > .payment {
+    border: 2px solid black;
+    background-color: #ddc9bc;
+    width: 30rem;
+    height: 15rem;
+    margin-right: 2rem;
+    float: right;
+    margin-top: 0;
+    padding-top: 0.5rem;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    > .div {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding-top: 1rem;
+
+      > .deliveryToArea {
+        padding-left: 7rem;
+      }
+
+      > .deliveryArea {
+        color: brown;
+      }
+    }
+  }
+
+  > .paymentTwo {
+    margin-right: 2rem;
+    z-index: 10;
+    margin-top: 1rem !important;
+    border: 2px solid black;
+    background-color: #ddc9bc;
+    width: 30rem;
+    height: 26rem;
+    margin-right: 2rem;
+    margin-top: 0;
+
+    > .h1 {
+      padding: 0.5rem 2rem;
+    }
+    > .paragraph {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 2rem;
+      font-size: large;
+
+      > p > .span {
+        font-size: x-small;
+      }
+    }
+    > hr {
+      width: 85%;
+      margin-left: 2rem;
+    }
+
+    > .bt-buyNow {
+      position: relative;
+      width: 20rem;
+      margin-top: 15%;
+      align-items: center;
+      margin-left: 16%;
+      padding: 0.5rem;
+      background-color: #efeae2;
+      border: 1px solid black;
+      color: black;
+      text-decoration: none;
+      text-align: center;
+    }
+    > .bt-buyNow:hover {
+      background-color: black !important;
+      color: white;
+      cursor: pointer;
+    }
+
+    > Form {
+      width: 70%;
+      height: auto;
+      margin-left: 2rem;
+    }
+  }
+}

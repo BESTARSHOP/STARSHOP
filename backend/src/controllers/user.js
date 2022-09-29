@@ -13,7 +13,7 @@ exports.register = async (req, res) => {
   await user.save();
 
   res.cookie("user-token", user.token, {
-    maxAge: 90000,
+    maxAge: 2592000,
     sameSite: "strict",
     httponly: true,
   });
@@ -40,7 +40,7 @@ exports.login = async (req, res, next) => {
   user.token = crypto.randomBytes(64).toString("hex");
   await user.save();
   res.cookie("user-token", user.token, {
-    maxAge: 90000,
+    maxAge: 2592000,
     sameSite: "strict",
     httponly: true,
   });
@@ -64,7 +64,7 @@ exports.logout = async (req, res) => {
     await user.save();
   }
   res.cookie("user-token", "", {
-    maxAge: 90000,
+    maxAge: 2592000,
     sameSite: "strict",
     httponly: true,
   });

@@ -28,6 +28,13 @@
       font-size: small;
       color: brown;
     }
+    > .card-body > .card-title2 > .rating {
+      display: flex;
+      border: 1px solid brown;
+      margin-left: 16rem;
+      width: 11rem;
+      gap: 1rem;
+    }
 
     > .card-body > .buttons > #link-go-to-card,
     #link-add-to-card {
@@ -49,6 +56,10 @@
     > .card-body > .buttons > #link-go-to-card:hover,
     #link-add-to-card:hover {
       background-color: #ddc9bc;
+    }
+    > .error {
+      color: red;
+      margin-top: 10px;
     }
   }
 }

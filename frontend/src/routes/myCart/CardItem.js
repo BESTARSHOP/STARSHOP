@@ -8,7 +8,7 @@ export function CardItem(props) {
 
   return (
     <>
-      <hr style={{ width: "62%" }} />
+      <hr style={{ width: "75%" }} />
       <div
         key={props.index}
         style={{
@@ -28,7 +28,7 @@ export function CardItem(props) {
             alt={props.item.title}
           />
 
-          <td
+          <div
             style={{
               display: "flex",
               flexDirection: "column",
@@ -49,7 +49,7 @@ export function CardItem(props) {
               {props.item.title}
             </h6>
 
-            <td
+            <div
               style={{
                 display: "flex",
                 flexDirection: "column",
@@ -76,38 +76,7 @@ export function CardItem(props) {
                 <option value="5">9</option>
                 <option value="5">10</option>
               </Form.Select>
-              {/* <div>
-                Quantity ({props.item.quantity})
-                <Button
-                  variant="light"
-                  style={{
-                    color: "black",
-                    border: "1px solid black",
-                    fontWeight: "bolder",
-                    marginLeft: "1rem",
-                  }}
-                  onClick={() =>
-                    updateItemQuantity(props.item.id, props.item.quantity - 1)
-                  }
-                >
-                  -
-                </Button>
-                <Button
-                  variant="light"
-                  style={{
-                    color: "black",
-                    border: "1px solid black",
-                    fontWeight: "bolder",
-                    marginLeft: "0.7rem",
-                  }}
-                  onClick={() =>
-                    updateItemQuantity(props.item.id, props.item.quantity + 1)
-                  }
-                >
-                  +
-                </Button>
-              </div> */}
-            </td>
+            </div>
             <Button
               variant="danger"
               onClick={() => removeItem(props.item.id)}
@@ -120,7 +89,7 @@ export function CardItem(props) {
               <RiDeleteBinLine size={20} />
               Remove Item
             </Button>
-          </td>
+          </div>
         </div>
         <div
           style={{
@@ -130,7 +99,7 @@ export function CardItem(props) {
             fontWeight: "bolder",
           }}
         >
-          {props.item.price} $
+          {props.item.price * props.item.quantity} $
         </div>
       </div>
     </>
