@@ -69,12 +69,13 @@ p {
         height: 70%;
         background-color: #efeae2;
         border-radius: 5px;
+        padding-right: 0.5rem;
 
         > .icon-myCart {
           display: flex;
           flex-direction: row;
           align-items: center;
-          padding-left: 1rem;
+          padding-left: 0.5rem;
           gap: 1rem;
           text-decoration: none;
           font-size: 30px;

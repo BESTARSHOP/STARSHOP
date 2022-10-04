@@ -129,8 +129,8 @@ export default function MyCart() {
               <div
                 style={{
                   border: "1px solid",
-                  width: "1000px",
-                  height: "250px",
+                  width: "55rem",
+                  height: "15rem",
                   padding: "20px",
                   borderRadius: "5px",
                   backgroundColor: " #ddc9bc",
@@ -148,14 +148,13 @@ export default function MyCart() {
                   style={{
                     display: "flex",
                     alignItems: "center",
-                    width: "350px",
+                    width: "25rem",
                     textDecoration: "none",
                     color: "black",
                     background: "#ddc9bc",
                     padding: "10px 20px",
                     borderRadius: "5px",
                     fontSize: "x-large",
-                    bottom: "50px",
                     opacity: "0.6",
                     fontFamily: "Cutive Mono",
                     fontWeight: "bold",
