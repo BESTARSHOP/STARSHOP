@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useState, useEffect } from "react-router-dom";
 import "./index.scss";
 import { FaUserAlt } from "react-icons/fa";
 import { useCart } from "react-use-cart";
@@ -7,6 +7,7 @@ import useUser from "../hooks/useUser";
 
 export default function Layout(props) {
   const user = useUser();
+
   const { isEmpty, totalItems } = useCart();
   const accountLink = user.data ? "/account" : "/login";
 
@@ -14,7 +15,7 @@ export default function Layout(props) {
     <div className="Layout">
       <header>
         <div className="header-left">
-          <div className="logo" >𝕊𝕋𝔸ℝ 𝕊ℍ𝕆ℙ </div>
+          <div className="logo">𝕊𝕋𝔸ℝ 𝕊ℍ𝕆ℙ </div>
         </div>
         <div className="header-center">
           <Link to="/" className="home-button">

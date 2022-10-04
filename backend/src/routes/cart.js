@@ -14,6 +14,12 @@ app.delete(
   validation.deletProduct,
   controller.deletProduct
 );
+app.delete(
+  "/deletProducts",
+  auth,
+  validation.deletProducts,
+  controller.deletProducts
+);
 app.patch(
   "/updateProduct",
   auth,

@@ -7,8 +7,7 @@ import StarRating from "../StarRating/StarRating";
 
 export default function ProductCardDescription(props) {
   const [productData, setProductData] = useState([]);
-  const [price, setPrice] = useState();
-  const [title, setTitle] = useState();
+
   const [error, setError] = useState();
   const id = props.id;
 
@@ -16,6 +15,7 @@ export default function ProductCardDescription(props) {
     const res = await fetch(`http://localhost:3001/products/${id}`).then(
       (res) => res.json()
     );
+    res.id = res._id;
     setProductData(res);
   }
 
@@ -29,13 +29,14 @@ export default function ProductCardDescription(props) {
     const res = await fetch("http://localhost:3001/cart/addProduct", {
       method: "POST",
       credentials: "include",
-      headres: {
+      headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ title: title, price: price }),
+      body: JSON.stringify({ product: id, amount: 1 }),
     });
     const result = await res.json();
     if (res.status === 200) {
+      console.log(productData);
       addItem(productData);
     } else if (result.errors) {
       setError(result.errors[0].msg);
