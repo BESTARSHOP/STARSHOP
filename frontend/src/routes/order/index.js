@@ -3,6 +3,7 @@ import Layout from "../../Layout";
 import ListGroup from "react-bootstrap/ListGroup";
 import { useCart } from "react-use-cart";
 import { Button } from "react-bootstrap";
+import moment from "moment";
 
 export default function Order() {
   const { items, cartTotal } = useCart();
@@ -39,7 +40,9 @@ export default function Order() {
                 <p>11111 city</p>
               </div>
               <h6 className="deliveryArea">
-                Delivery: November 1, 2022 - November 6, 2022
+                Delivery: {moment().add(7, "days").format("DD.MM.YYYY")} &nbsp;
+                - &nbsp;
+                {moment().add(9, "days").format("DD.MM.YYYY")}
               </h6>
             </div>
           </div>

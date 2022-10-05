@@ -27,12 +27,7 @@ export default function ProductCard(props) {
         }}
       >
         <div style={{ width: "auto", height: "auto" }}>
-          <Card.Img
-            variant="top"
-            src={image}
-            style={{ height: "35vh" }}
-            className="img-fluid"
-          />
+          <Card.Img variant="top" src={image} className="cardImg img-fluid" />
         </div>
       </div>
       <Card.Body>

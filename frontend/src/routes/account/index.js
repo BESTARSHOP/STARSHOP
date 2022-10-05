@@ -25,9 +25,10 @@ export default function Account() {
         <div className="ContactDetail">
           {user.data && (
             <div className="firstDiv">
-              <h2 className="titel">Contact detail</h2>
+              <h2 className="titel">Settings</h2>
               <div className="contactDetailArea">
                 <div className="nameLabelArea">
+                  <h5>Contact Details</h5>
                   <div className="nameArea">
                     <label className="form-label">Name *</label>
                     <input
@@ -48,8 +49,8 @@ export default function Account() {
                     />
                   </div>
                 </div>
-                <div>
-                  <div style={{ marginTop: "3rem" }}>
+                <div className="uploadArea">
+                  <div>
                     <div
                       style={{
                         display: "flex",
@@ -162,11 +163,11 @@ export default function Account() {
                     </div>
                   </div> */}
 
-                  <div class="button-delete-update ">
+                  <div className="button-delete-update ">
                     <button type="button" class="button1 btn btn-danger btn-lg">
                       Delete profile
                     </button>
-                    <button type="button" class="button2 btn btn-danger">
+                    <button type="button" className="button2 btn btn-danger">
                       Update profile
                     </button>
                   </div>
@@ -212,7 +213,7 @@ export default function Account() {
             Logout
           </button>
         </div>
-        {/* <footer className="footerAccount">
+        <footer className="footerAccount">
           <div className="footer-left">
             <p>
               AGB - Datenschutz - cookies Verwalten - Impressum - Online
@@ -248,7 +249,7 @@ export default function Account() {
               </a>
             </div>
           </div>
-        </footer> */}
+        </footer>
       </div>
     </Layout>
   );
