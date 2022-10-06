@@ -9,29 +9,31 @@ export default function Order() {
   const { items, cartTotal } = useCart();
   return (
     <Layout>
-      <h1 className="myOrders">My Orders</h1>
-      <div className="allBoxes">
-        <ListGroup>
-          {items.map((item) => {
-            return (
-              <ListGroup key={item.id} className="listGroup">
-                <div key={item.index} className="cartInfo">
-                  <div className="img-Titel">
-                    <img src={item.image} alt={item.image} />
-                    <div className="titelInfo">
-                      <p>{item.title}</p>
+      <div className="orderContainer">
+        <div className="productsOrder">
+          <h1 className="myOrders">My Orders</h1>
+          <ListGroup>
+            {items.map((item) => {
+              return (
+                <ListGroup key={item.id} className="listGroup">
+                  <div key={item.index} className="cartInfo">
+                    <div className="img-Titel">
+                      <img src={item.image} alt={item.image} />
+                      <div className="titelInfo">
+                        <p>{item.title}</p>
+                      </div>
+                    </div>
+                    <div className="quantityInfo">{item.quantity}</div>
+                    <div className="priceInfo">
+                      {item.price * item.quantity} $
                     </div>
                   </div>
-                  <div className="quantityInfo">{item.quantity}</div>
-                  <div className="priceInfo">
-                    {item.price * item.quantity} $
-                  </div>
-                </div>
-              </ListGroup>
-            );
-          })}
-        </ListGroup>
-        <div className="towBoxesPayment">
+                </ListGroup>
+              );
+            })}
+          </ListGroup>
+        </div>
+        <div className="towBoxes">
           <div className="payment">
             <div className="div">
               <h6>Delivery To: </h6>
@@ -69,6 +71,12 @@ export default function Order() {
           </div>
         </div>
       </div>
+      {/* <div className="allBoxes">
+        
+        <div className="towBoxesPayment">
+          
+        </div>
+      </div> */}
     </Layout>
   );
 }

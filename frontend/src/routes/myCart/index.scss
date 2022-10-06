@@ -100,3 +100,59 @@
     }
   }
 }
+@media screen and (max-width: 800px) {
+  .großeConteiner {
+    flex-direction: column;
+  }
+
+  .containerPos {
+    position: initial !important;
+    margin-top: 0 !important;
+  }
+  .header {
+    margin-top: 0 !important;
+    gap: 7rem;
+  }
+
+  .boxEmpty {
+    width: 20rem !important;
+    margin: 0 auto;
+    margin-top: 3rem;
+    height: 20rem !important;
+
+    > .linkCountinueShopping {
+      width: 18rem !important;
+      flex: 1;
+      padding: 0 !important;
+    }
+  }
+
+  .payment-boxes {
+    margin-left: 7%;
+    position: initial;
+    margin-top: 5rem;
+  }
+  .boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+
+  .payment1 {
+    width: 20rem;
+
+    > .paragraph {
+      padding: 0 1rem;
+    }
+
+    > .bt-buyNow {
+      width: 15rem;
+      margin-left: 10%;
+    }
+  }
+
+  .payment2 {
+    width: 20rem;
+    padding-left: 0.5rem;
+  }
+}

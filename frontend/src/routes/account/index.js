@@ -29,12 +29,13 @@ export default function Account() {
               <div className="contactDetailArea">
                 <div className="nameLabelArea">
                   <h5>Contact Details</h5>
-                  <div className="nameArea">
+                  <div>
                     <label className="form-label">Name *</label>
                     <input
                       type="text"
                       placeholder=""
                       aria-label="First name"
+                      className="form-control"
                       value={user.data.name}
                     />
                   </div>
@@ -50,8 +51,9 @@ export default function Account() {
                   </div>
                 </div>
                 <div className="uploadArea">
-                  <div>
+                  <div className="first">
                     <div
+                      className="secound"
                       style={{
                         display: "flex",
                         flexDirection: "column",
@@ -60,7 +62,7 @@ export default function Account() {
                     >
                       <h5>Upload your profile photo</h5>
                       <div
-                        class="text-center"
+                        class="text-center centerDiv"
                         style={{
                           display: "flex",
                           flexDirection: "column",
@@ -68,12 +70,13 @@ export default function Account() {
                         }}
                       >
                         <div
-                          class="square position-relative display-2 mb-3"
+                          class="foto square position-relative display-2 mb-3"
                           style={{
                             border: "1px ",
                             width: "8rem",
                             height: "8rem",
                             background: "#FFFFFF",
+                            marginLeft: "3rem",
                           }}
                         >
                           <FaUserAlt
@@ -83,13 +86,14 @@ export default function Account() {
                           />
                         </div>
 
-                        <input type="file" id="customFile" />
+                        {/* <input type="file" id="customFile" />  */}
                         <div
+                          className="twoButtons"
                           style={{
                             display: "flex",
                             flexDirection: "row",
                             gap: "1rem",
-                            marginLeft: "4.3rem",
+                            marginLeft: "2rem",
                           }}
                         >
                           <label
@@ -125,44 +129,6 @@ export default function Account() {
               </div>
               <div class="passwordArea">
                 <div class="passwordArea1">
-                  {/* <h4 class="titel2">Change Password</h4> 
-                     <div className="passwordCangeArea">
-                    <div className="oldNewPassword">
-                      <div class="oldPassword">
-                        <label for="exampleInputPassword1" class="form-label">
-                          Old password *
-                        </label>
-                        <input
-                          type="password"
-                          class="form-control"
-                          id="exampleInputPassword1"
-                        />
-                      </div>
-
-                      <div class="newPassword">
-                        <label for="exampleInputPassword2" class="form-label">
-                          New password *
-                        </label>
-                        <input
-                          type="password"
-                          class="form-control"
-                          id="exampleInputPassword2"
-                        />
-                      </div>
-                    </div>
-
-                    <div class="ConfirmPassword">
-                      <label for="exampleInputPassword3" class="form-label">
-                        Confirm Password *
-                      </label>
-                      <input
-                        type="password"
-                        class="form-control"
-                        id="exampleInputPassword3"
-                      />
-                    </div>
-                  </div> */}
-
                   <div className="button-delete-update ">
                     <button type="button" class="button1 btn btn-danger btn-lg">
                       Delete profile
