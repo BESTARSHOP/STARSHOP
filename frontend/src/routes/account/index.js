@@ -8,7 +8,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 import { BsInstagram } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
-import { useCart } from "react-use-cart";
+import useCart from "../../hooks/useCart";
 
 export default function Account() {
   const user = useUser();
@@ -17,7 +17,7 @@ export default function Account() {
     await user.logout();
     navigate("/login");
   };
-  const { items } = useCart();
+  const cart = useCart();
 
   return (
     <Layout>
@@ -178,19 +178,19 @@ export default function Account() {
         <div className="orderList">
           <h2>my Order</h2>
           <ListGroup>
-            {items.map((item) => {
+            {cart.data?.products.map((item) => {
               return (
-                <ListGroup key={item.id} className="listGroupAccount">
-                  <div key={item.index} className="cartInfoAccount">
+                <ListGroup key={item.product._id} className="listGroupAccount">
+                  <div className="cartInfoAccount">
                     <div className="img-TitelAccount">
-                      <img src={item.image} alt={item.image} />
+                      <img src={item.product.image} alt={item.product.title} />
                       <div className="titelInfoAccount">
-                        <p>{item.title}</p>
+                        <p>{item.product.title}</p>
                       </div>
                     </div>
-                    <div className="quantityInfoAccount">{item.quantity}</div>
+                    <div className="quantityInfoAccount">{item.amount}</div>
                     <div className="priceInfoAccount">
-                      {item.price * item.quantity} $
+                      {item.product.price * item.amount} $
                     </div>
                   </div>
                 </ListGroup>

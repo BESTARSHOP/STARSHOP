@@ -1,11 +1,11 @@
 import "./index.scss";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { Button, Form } from "react-bootstrap";
-import { useCart } from "react-use-cart";
+import useCart from "../../hooks/useCart";
 import { useState } from "react";
 
 export function CardItem(props) {
-  const { updateItemQuantity, removeItem } = useCart();
+  const cart = useCart();
 
   return (
     <>
@@ -58,9 +58,12 @@ export function CardItem(props) {
               }}
             >
               <Form.Select
-                value={props.item.quantity}
+                value={props.amount}
                 onChange={(event) =>
-                  updateItemQuantity(props.item.id, +event.target.value)
+                  cart.updateProduct({
+                    productId: props.item._id,
+                    amount: parseInt(event.target.value),
+                  })
                 }
                 style={{
                   width: "7rem",
@@ -80,7 +83,11 @@ export function CardItem(props) {
             </div>
             <Button
               variant="danger"
-              onClick={() => removeItem(props.item.id)}
+              onClick={() =>
+                cart.deletProduct({
+                  productId: props.item._id,
+                })
+              }
               style={{
                 width: "10rem",
                 display: "flex",
@@ -100,7 +107,7 @@ export function CardItem(props) {
             fontWeight: "bolder",
           }}
         >
-          {props.item.price * props.item.quantity} $
+          {props.item.price * props.amount} $
         </div>
       </div>
     </>

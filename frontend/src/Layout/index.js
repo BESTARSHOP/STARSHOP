@@ -1,14 +1,14 @@
 import { Link, useState, useEffect } from "react-router-dom";
 import "./index.scss";
 import { FaUserAlt } from "react-icons/fa";
-import { useCart } from "react-use-cart";
+import useCart from "../hooks/useCart";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import useUser from "../hooks/useUser";
 
 export default function Layout(props) {
   const user = useUser();
 
-  const { isEmpty, totalItems } = useCart();
+  const cart = useCart();
   const accountLink = user.data ? "/account" : "/login";
 
   return (
@@ -34,10 +34,12 @@ export default function Layout(props) {
             <Link to="/myCart" className="icon-myCart">
               <HiOutlineShoppingBag size={40} color="black" />
 
-              {!isEmpty && (
-                <span style={{ position: "relative" }}>{totalItems}</span>
+              {!cart.isEmpty && (
+                <span style={{ position: "relative" }}>
+                  {cart.data?.products.length}
+                </span>
               )}
-              <span style={{ marginLeft: !isEmpty ? "-13px" : 0 }}></span>
+              <span style={{ marginLeft: !cart.isEmpty ? "-13px" : 0 }}></span>
             </Link>
           </button>
         </div>
