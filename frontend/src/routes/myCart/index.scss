@@ -11,7 +11,7 @@
 }
 .header {
   display: flex;
-  gap: 9rem;
+  gap: 16.5rem;
 }
 
 .payment1 {
@@ -108,15 +108,19 @@
   .containerPos {
     position: initial !important;
     margin-top: 0 !important;
+
+    > .allItems {
+      width: 100% !important;
+    }
   }
   .header {
     margin-top: 0 !important;
-    gap: 7rem;
+    gap: 4rem;
   }
 
   .boxEmpty {
     width: 20rem !important;
-    margin: 0 auto;
+    margin: 0 1rem;
     margin-top: 3rem;
     height: 20rem !important;
 

@@ -88,7 +88,7 @@ export default function MyCart() {
                 <h1 style={{ color: "black" }}>The Cart</h1>
                 <Button
                   variant="danger"
-                  className="m-2"
+                  className="m-2 "
                   style={{ width: "10.3rem" }}
                   onClick={() => emptyCart()}
                 >
@@ -97,7 +97,11 @@ export default function MyCart() {
               </div>
             )}
             <Row>
-              <div responsive="sm" style={{ marginBottom: "5" }}>
+              <div
+                className="allItems"
+                responsive="sm"
+                style={{ marginBottom: "5" }}
+              >
                 <div>
                   {items.map((item, index) => {
                     return <CardItem index={index} item={item} key={index} />;

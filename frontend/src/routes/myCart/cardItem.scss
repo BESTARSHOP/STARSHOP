@@ -1,19 +1,25 @@
 @media screen and (max-width: 800px) {
   .hr {
-    margin: 1rem;
-    width: 90% !important;
+    margin-top: 1rem;
+    margin-left: 0;
+    margin-right: 0 !important;
+    width: 100% !important;
   }
 
   .container {
-    width: 22.5rem !important;
+    width: 100% !important;
     margin-left: 0 !important;
+    margin-top: 1rem;
+    margin-left: 1rem !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
 
     > .secoundContainer {
       gap: 0rem;
 
       > .image {
-        width: 7rem !important;
-        height: 7rem !important;
+        width: 5rem !important;
+        height: 5rem !important;
         margin-left: 0;
       }
       > .infos {
@@ -38,7 +44,7 @@
     padding: 0 !important;
   }
   .button {
-    width: 9rem !important;
+    width: 8.2rem !important;
     height: 2rem;
     font-size: small !important;
   }

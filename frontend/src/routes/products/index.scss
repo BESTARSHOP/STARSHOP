@@ -53,6 +53,10 @@
   .products-buttons {
     flex-direction: column;
     align-items: center;
+
+    > .button {
+      height: 3.2rem;
+    }
   }
   > #row > #col > #inputGroup > .input-search {
     display: flex;
