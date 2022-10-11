@@ -1,0 +1,48 @@
+.thanks {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  height: 15rem;
+  margin-left: 2rem;
+
+  > .background {
+    > .transbox {
+      margin: 30px;
+      background-color: #ffffff;
+      opacity: 0.8;
+
+      span {
+        font-size: 4rem;
+        font-weight: bold;
+        padding: 0 1rem;
+      }
+      .spanT {
+        color: hsl(0, 80%, 50%);
+      }
+      .spanY {
+        color: hsl(225, 80%, 50%);
+      }
+      .spanF {
+        color: hsl(45, 80%, 50%);
+      }
+      .spanY2 {
+        color: hsl(180, 81%, 40%);
+      }
+      .spanO {
+        color: hsl(90, 89%, 32%);
+      }
+    }
+  }
+}
+.parrProducte {
+  margin-top: 2rem;
+  background-color: #ddc9bc;
+  width: 100%;
+  height: 53vh;
+  overflow-x: scroll;
+}
+
+.zurück {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}

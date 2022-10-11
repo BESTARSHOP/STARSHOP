@@ -23,9 +23,9 @@ import { useState } from "react";
 
 export default function MyCart(props) {
   const cart = useCart();
-  const [address, setAddress] = useState();
-  const [city, setCity] = useState();
-  const [zip, setZip] = useState();
+  const [address, setAddress] = useState("");
+  const [city, setCity] = useState("");
+  const [zip, setZip] = useState("");
   const [buyMethode, setBuyMethode] = useState();
   return (
     <>
@@ -91,7 +91,7 @@ export default function MyCart(props) {
               <div className="header">
                 <h1 style={{ color: "black" }}>The Cart</h1>
                 <Button
-                  variant="danger"
+                  variant="outline-danger"
                   className="m-2 "
                   style={{ width: "10.3rem" }}
                   onClick={() => cart.deletProducts()}
@@ -106,18 +106,16 @@ export default function MyCart(props) {
                 responsive="sm"
                 style={{ marginBottom: "5" }}
               >
-                <div>
-                  {cart.data?.products.map((item, index) => {
-                    return (
-                      <CardItem
-                        index={index}
-                        item={item.product}
-                        key={index}
-                        amount={item.amount}
-                      />
-                    );
-                  })}
-                </div>
+                {cart.data?.products.map((item, index) => {
+                  return (
+                    <CardItem
+                      index={index}
+                      item={item.product}
+                      key={index}
+                      amount={item.amount}
+                    />
+                  );
+                })}
               </div>
               {!cart.isEmpty && (
                 <Row

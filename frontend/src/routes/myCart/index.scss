@@ -11,7 +11,8 @@
 }
 .header {
   display: flex;
-  gap: 16.5rem;
+  justify-content: space-between;
+  padding-right: 6.5rem;
 }
 
 .payment1 {

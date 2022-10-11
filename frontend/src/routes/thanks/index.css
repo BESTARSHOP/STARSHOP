@@ -1,0 +1,58 @@
+@charset "UTF-8";
+.thanks {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 15rem;
+  margin-left: 2rem;
+}
+
+.thanks > .background > .transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  opacity: 0.8;
+}
+
+.thanks > .background > .transbox span {
+  font-size: 4rem;
+  font-weight: bold;
+  padding: 0 1rem;
+}
+
+.thanks > .background > .transbox .spanT {
+  color: #e61a1a;
+}
+
+.thanks > .background > .transbox .spanY {
+  color: #1a4de6;
+}
+
+.thanks > .background > .transbox .spanF {
+  color: #e6b31a;
+}
+
+.thanks > .background > .transbox .spanY2 {
+  color: #13b9b9;
+}
+
+.thanks > .background > .transbox .spanO {
+  color: #529a09;
+}
+
+.parrProducte {
+  margin-top: 2rem;
+  background-color: #ddc9bc;
+  width: 100%;
+  height: 53vh;
+  overflow-x: scroll;
+}
+
+.zurück {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+/*# sourceMappingURL=index.css.map */

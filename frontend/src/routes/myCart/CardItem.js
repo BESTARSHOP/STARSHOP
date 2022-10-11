@@ -1,4 +1,4 @@
-import "./index.scss";
+import "./cardItem.scss";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { Button, Form } from "react-bootstrap";
 import useCart from "../../hooks/useCart";
@@ -22,7 +22,7 @@ export function CardItem(props) {
           style={{
             display: "flex",
             justifyContent: "space-around",
-            width: "90%",
+            width: "80%",
           }}
         >
           <img
@@ -88,7 +88,8 @@ export function CardItem(props) {
               </Form.Select>
             </div>
             <Button
-              variant="danger"
+              className="button"
+              variant="outline-danger"
               onClick={() =>
                 cart.deletProduct({
                   productId: props.item._id,
@@ -106,8 +107,9 @@ export function CardItem(props) {
           </div>
         </div>
         <div
+          className="price"
           style={{
-            width: "20rem",
+            flexGrow: "0",
             textAlign: "right",
             padding: "2.5rem",
             fontWeight: "bolder",
