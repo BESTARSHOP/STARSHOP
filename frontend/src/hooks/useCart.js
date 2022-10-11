@@ -83,7 +83,7 @@ export function CartProvider(props) {
         setError("something was rong");
       }
     },
-    deletProducts: async (body) => {
+    deletProduct: async (body) => {
       if (!user.data) {
         return;
       }

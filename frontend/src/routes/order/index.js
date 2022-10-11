@@ -36,6 +36,7 @@ export default function Order() {
                 </ListGroup>
               );
             })}
+            {console.log(cart.data.address.street)}
           </ListGroup>
         </div>
         <div className="towBoxes">
@@ -44,7 +45,7 @@ export default function Order() {
               <h6>Delivery To: {user.data.name}</h6>
               <div className="deliveryToArea">
                 <p>
-                  Address: {cart.data.address.street},{" "}
+                  ; Address: {cart.data.address.street},{" "}
                   {cart.data.address.zipcode}, {cart.data.address.city}
                 </p>
                 <p>BuyMethode:{cart.data.buyMethode}</p>
