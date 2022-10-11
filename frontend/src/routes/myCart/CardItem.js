@@ -2,34 +2,38 @@ import "./index.scss";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { Button, Form } from "react-bootstrap";
 import useCart from "../../hooks/useCart";
-import { useState } from "react";
 
 export function CardItem(props) {
   const cart = useCart();
 
   return (
     <>
-      <hr style={{ width: "75%" }} />
+      <hr className="hr" style={{ width: "90%" }} />
       <div
         key={props.index}
+        className="container"
         style={{
           display: "flex",
-          width: "100rem",
+          width: "100%",
         }}
       >
         <div
+          className="secoundContainer"
           style={{
             display: "flex",
-            justifyContent: "space-between",
+            justifyContent: "space-around",
+            width: "90%",
           }}
         >
           <img
+            className="image"
             src={props.item.image}
             style={{ width: "17rem", height: "17rem" }}
             alt={props.item.title}
           />
 
           <div
+            className="infos"
             style={{
               display: "flex",
               flexDirection: "column",
@@ -51,6 +55,7 @@ export function CardItem(props) {
             </h6>
 
             <div
+              className="formInfos"
               style={{
                 display: "flex",
                 flexDirection: "column",
@@ -65,8 +70,9 @@ export function CardItem(props) {
                     amount: parseInt(event.target.value),
                   })
                 }
+                className="form"
                 style={{
-                  width: "7rem",
+                  maxWidth: "7rem",
                 }}
               >
                 <option value="1">1</option>
@@ -89,7 +95,7 @@ export function CardItem(props) {
                 })
               }
               style={{
-                width: "10rem",
+                maxWidth: "10rem",
                 display: "flex",
                 gap: "0.5rem",
               }}

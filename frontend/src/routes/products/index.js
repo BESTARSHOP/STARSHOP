@@ -90,7 +90,7 @@ export default function Products() {
               <InputGroup
                 id="inputGroup"
                 style={{
-                  margin: "2rem",
+                  margin: "2rem 4rem",
                 }}
               >
                 <input

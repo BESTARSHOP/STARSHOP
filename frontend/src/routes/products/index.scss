@@ -49,3 +49,18 @@
     width: 75%;
   }
 }
+@media screen and (max-width: 800px) {
+  .products-buttons {
+    flex-direction: column;
+    align-items: center;
+
+    > .button {
+      height: 3.2rem;
+    }
+  }
+  > #row > #col > #inputGroup > .input-search {
+    display: flex;
+    margin: 2rem 2rem;
+    align-items: center;
+  }
+}

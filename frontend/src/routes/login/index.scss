@@ -58,3 +58,13 @@
     }
   }
 }
+
+@media screen and (max-width: 800px) {
+  .Login {
+    margin: 2rem 0;
+    height: 28rem;
+
+    > .box {
+    }
+  }
+}
