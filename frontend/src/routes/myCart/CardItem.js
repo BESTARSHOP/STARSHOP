@@ -2,7 +2,6 @@ import "./index.scss";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { Button, Form } from "react-bootstrap";
 import useCart from "../../hooks/useCart";
-import { useState } from "react";
 
 export function CardItem(props) {
   const cart = useCart();
