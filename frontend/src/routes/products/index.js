@@ -65,13 +65,13 @@ export default function Products() {
               women's clothing
             </button>
             <button
-              className="button products-women-button"
+              className="button products-electronics-button"
               onClick={() => setCategory("electronics")}
             >
               electronics
             </button>
             <button
-              className="button products-women-button"
+              className="button products-jewelery-button"
               onClick={() => setCategory("jewelery")}
             >
               jewelery

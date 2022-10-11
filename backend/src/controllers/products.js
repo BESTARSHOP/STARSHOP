@@ -1,7 +1,13 @@
 const Product = require("../models/product");
 exports.getProducts = async (req, res, next) => {
   // all products
-  const liste = await Product.find();
+  const category = req.query.category;
+
+  let query = Product.find();
+  if (category) {
+    query = query.where("category").equals(category);
+  }
+  const liste = await query;
   res.status(200).send(liste);
 };
 

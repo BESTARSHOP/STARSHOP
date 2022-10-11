@@ -12,6 +12,7 @@ import useCart from "../../hooks/useCart";
 
 export default function Account() {
   const user = useUser();
+
   const navigate = useNavigate();
   const handleLogout = async () => {
     await user.logout();
@@ -82,7 +83,7 @@ export default function Account() {
                           />
                         </div>
 
-                        <input type="file" id="customFile" />
+                        <input type="file" id="customFile" accept="image/*" />
                         <div
                           style={{
                             display: "flex",
