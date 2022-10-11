@@ -1,31 +1,36 @@
 import "./index.scss";
 import Layout from "../../Layout";
 import ListGroup from "react-bootstrap/ListGroup";
-import { useCart } from "react-use-cart";
+import useCart from "../../hooks/useCart";
 import { Button } from "react-bootstrap";
 import moment from "moment";
+import useUser from "../../hooks/useUser";
 
 export default function Order() {
-  const { items, cartTotal } = useCart();
+  const user = useUser();
+  const cart = useCart();
   return (
     <Layout>
       <div className="orderContainer">
         <div className="productsOrder">
           <h1 className="myOrders">My Orders</h1>
           <ListGroup>
-            {items.map((item) => {
+            {cart.data?.products.map((item) => {
               return (
-                <ListGroup key={item.id} className="listGroup">
-                  <div key={item.index} className="cartInfo">
+                <ListGroup key={item.products._id} className="listGroup">
+                  <div className="cartInfo">
                     <div className="img-Titel">
-                      <img src={item.image} alt={item.image} />
+                      <img
+                        src={item.products.image}
+                        alt={item.products.title}
+                      />
                       <div className="titelInfo">
-                        <p>{item.title}</p>
+                        <p>{item.products.title}</p>
                       </div>
                     </div>
-                    <div className="quantityInfo">{item.quantity}</div>
+                    <div className="quantityInfo">{item.amount}</div>
                     <div className="priceInfo">
-                      {item.price * item.quantity} $
+                      {item.products.price * item.amount} $
                     </div>
                   </div>
                 </ListGroup>
@@ -36,10 +41,13 @@ export default function Order() {
         <div className="towBoxes">
           <div className="payment">
             <div className="div">
-              <h6>Delivery To: </h6>
+              <h6>Delivery To: {user.data.name}</h6>
               <div className="deliveryToArea">
-                <p>street 1</p>
-                <p>11111 city</p>
+                <p>
+                  Address: {cart.data.address.street},{" "}
+                  {cart.data.address.zipcode}, {cart.data.address.city}
+                </p>
+                <p>BuyMethode:{cart.data.buyMethode}</p>
               </div>
               <h6 className="deliveryArea">
                 Delivery: {moment().add(7, "days").format("DD.MM.YYYY")} &nbsp;
@@ -52,7 +60,7 @@ export default function Order() {
             <h1 className="h1">Summary</h1>
             <div className="paragraph">
               <p>Total Price</p>
-              <p> {cartTotal.toFixed(2)} $</p>
+              <p> {cart.cartTotal.toFixed(2)} $</p>
             </div>
             <div className="paragraph">
               <p>Shipping</p>
@@ -63,7 +71,7 @@ export default function Order() {
               <p>
                 invoice amount <span className="span">VAT included.</span>
               </p>
-              <p>{(cartTotal + 5.95).toFixed(2)} $</p>
+              <p>{(cart.cartTotal + 5.95).toFixed(2)} $</p>
             </div>
             <hr />
 
@@ -71,12 +79,6 @@ export default function Order() {
           </div>
         </div>
       </div>
-      {/* <div className="allBoxes">
-        
-        <div className="towBoxesPayment">
-          
-        </div>
-      </div> */}
     </Layout>
   );
 }

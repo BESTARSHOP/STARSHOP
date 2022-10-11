@@ -17,12 +17,16 @@ import {
   Form,
   FloatingLabel,
 } from "react-bootstrap";
-import { useCart } from "react-use-cart";
+import useCart from "../../hooks/useCart";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
-export default function MyCart() {
-  const { isEmpty, items, cartTotal, emptyCart } = useCart();
-
+export default function MyCart(props) {
+  const cart = useCart();
+  const [address, setAddress] = useState();
+  const [city, setCity] = useState();
+  const [zip, setZip] = useState();
+  const [buyMethode, setBuyMethode] = useState();
   return (
     <>
       <Layout>
@@ -39,7 +43,7 @@ export default function MyCart() {
               marginTop: "2rem",
             }}
           >
-            {isEmpty ? (
+            {cart.isEmpty ? (
               <>
                 <div
                   className="boxEmpty"
@@ -90,7 +94,7 @@ export default function MyCart() {
                   variant="danger"
                   className="m-2 "
                   style={{ width: "10.3rem" }}
-                  onClick={() => emptyCart()}
+                  onClick={() => cart.deletProducts()}
                 >
                   Clear Cart
                 </Button>
@@ -103,12 +107,19 @@ export default function MyCart() {
                 style={{ marginBottom: "5" }}
               >
                 <div>
-                  {items.map((item, index) => {
-                    return <CardItem index={index} item={item} key={index} />;
+                  {cart.data?.products.map((item, index) => {
+                    return (
+                      <CardItem
+                        index={index}
+                        item={item.product}
+                        key={index}
+                        amount={item.amount}
+                      />
+                    );
                   })}
                 </div>
               </div>
-              {!isEmpty && (
+              {!cart.isEmpty && (
                 <Row
                   style={{
                     position: "fixed",
@@ -122,7 +133,7 @@ export default function MyCart() {
             </Row>
           </Container>
           <div className="payment-boxes">
-            {isEmpty ? (
+            {cart.isEmpty ? (
               <div></div>
             ) : (
               <div className="boxes">
@@ -130,7 +141,7 @@ export default function MyCart() {
                   <h1 className="h1">Summary</h1>
                   <div className="paragraph">
                     <p>Total Price</p>
-                    <p> {cartTotal.toFixed(2)} $</p>
+                    <p> {cart.cartTotal.toFixed(2)} $</p>
                   </div>
                   <div className="paragraph">
                     <p>Shipping</p>
@@ -141,13 +152,15 @@ export default function MyCart() {
                     <p>
                       invoice amount <span className="span">VAT included.</span>
                     </p>
-                    <p>{(cartTotal + 5.95).toFixed(2)} $</p>
+                    <p>{(cart.cartTotal + 5.95).toFixed(2)} $</p>
                   </div>
                   <hr />
                   <Form>
                     <Form.Group controlId="formGridAddress1">
                       <Form.Label>Address</Form.Label>
                       <Form.Control
+                        value={address}
+                        onChange={(e) => setAddress(e.target.value)}
                         placeholder="1234 Main St"
                         style={{ backgroundColor: " #efeae2" }}
                       />
@@ -155,25 +168,50 @@ export default function MyCart() {
                     <Row className="mb-3">
                       <Form.Group as={Col} controlId="formGridCity">
                         <Form.Label>City</Form.Label>
-                        <Form.Control style={{ backgroundColor: " #efeae2" }} />
+                        <Form.Control
+                          value={city}
+                          onChange={(e) => setCity(e.target.value)}
+                          style={{ backgroundColor: " #efeae2" }}
+                        />
                       </Form.Group>
 
                       <Form.Group as={Col}>
                         <Form.Label>Zip</Form.Label>
-                        <Form.Control style={{ backgroundColor: " #efeae2" }} />
+                        <Form.Control
+                          value={zip}
+                          onChange={(e) => setZip(e.target.value)}
+                          style={{ backgroundColor: " #efeae2" }}
+                        />
                       </Form.Group>
                     </Row>
                     <FloatingLabel label="Choose your payment method">
-                      <Form.Select style={{ backgroundColor: " #efeae2" }}>
-                        <option value="1">PayPal</option>
-                        <option value="2">Visa</option>
-                        <option value="3">MasterCard</option>
-                        <option value="3">Discover</option>
-                        <option value="3">Amex</option>
+                      <Form.Select
+                        value={buyMethode}
+                        onChange={(e) => setBuyMethode(e.target.value)}
+                        style={{ backgroundColor: " #efeae2" }}
+                      >
+                        <option value="PayPal">PayPal</option>
+                        <option value="Visa">Visa</option>
+                        <option value="MasterCard">MasterCard</option>
+                        <option value="Discover">Discover</option>
+                        <option value="Amex">Amex</option>
                       </Form.Select>
                     </FloatingLabel>
                   </Form>
-                  <Link to={"/order/"} className="bt-buyNow">
+                  <Link
+                    to={"/order/"}
+                    onClick={(e) => {
+                      cart.buyCart({
+                        address: {
+                          street: address,
+                          city: city,
+                          zipcode: zip,
+                        },
+                        buyMethode: buyMethode,
+                      });
+                    }}
+                    className="bt-buyNow"
+                  >
                     To Checkout
                   </Link>
                 </div>

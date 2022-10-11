@@ -1,12 +1,10 @@
 import "./index.scss";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { Button, Form } from "react-bootstrap";
-import { useCart } from "react-use-cart";
-import "./cardItem.scss";
-import { useState } from "react";
+import useCart from "../../hooks/useCart";
 
 export function CardItem(props) {
-  const { updateItemQuantity, removeItem } = useCart();
+  const cart = useCart();
 
   return (
     <>
@@ -65,9 +63,12 @@ export function CardItem(props) {
               }}
             >
               <Form.Select
-                value={props.item.quantity}
+                value={props.amount}
                 onChange={(event) =>
-                  updateItemQuantity(props.item.id, +event.target.value)
+                  cart.updateProduct({
+                    productId: props.item._id,
+                    amount: parseInt(event.target.value),
+                  })
                 }
                 className="form"
                 style={{
@@ -88,8 +89,11 @@ export function CardItem(props) {
             </div>
             <Button
               variant="danger"
-              onClick={() => removeItem(props.item.id)}
-              className="button"
+              onClick={() =>
+                cart.deletProduct({
+                  productId: props.item._id,
+                })
+              }
               style={{
                 maxWidth: "10rem",
                 display: "flex",
@@ -100,17 +104,16 @@ export function CardItem(props) {
               Remove Item
             </Button>
           </div>
-          <div
-            className="price"
-            style={{
-              maxWidth: "20rem",
-              textAlign: "right",
-              padding: "2.5rem",
-              fontWeight: "bolder",
-            }}
-          >
-            {props.item.price * props.item.quantity} $
-          </div>
+        </div>
+        <div
+          style={{
+            width: "20rem",
+            textAlign: "right",
+            padding: "2.5rem",
+            fontWeight: "bolder",
+          }}
+        >
+          {props.item.price * props.amount} $
         </div>
       </div>
     </>
