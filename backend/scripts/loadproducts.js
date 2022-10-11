@@ -4,10 +4,11 @@ const mongoose = require("mongoose");
 
 const { DB_URL, DB_PORT, DB_NAME, PORT } = process.env;
 const Product = require("../src/models/product");
+const { Promise } = require("node-fetch");
 mongoose.connect(`mongodb://${DB_URL}:${DB_PORT}/${DB_NAME}`);
 
-fetch("https://fakestoreapi.com/products").then(async (res) => {
-  const result = await res.json();
+Promise.resolve().then(async (res) => {
+  const result = require("./products.json");
   await Product.collection.drop();
   for (const item of result) {
     const product = new Product({
