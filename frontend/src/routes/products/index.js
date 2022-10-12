@@ -37,9 +37,6 @@ export default function Products() {
   useEffect(() => {
     if (id) filterProduct(parseInt(id));
   }, []);
-  // "category": {
-  //   "id":1,
-  //   "name": "men's clothing" }
 
   return (
     <>
@@ -87,12 +84,7 @@ export default function Products() {
               xl={4}
               className="mb-3 mx-auto text-center"
             >
-              <InputGroup
-                id="inputGroup"
-                style={{
-                  margin: "2rem 4rem",
-                }}
-              >
+              <InputGroup id="inputGroup">
                 <input
                   type="text"
                   name="search"

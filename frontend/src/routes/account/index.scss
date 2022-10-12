@@ -12,6 +12,8 @@
     grid-area: order;
     margin-top: 2rem;
     margin-left: 4rem;
+    overflow-y: scroll;
+    max-height: 65vh;
   }
 
   .listGroupAccount {
