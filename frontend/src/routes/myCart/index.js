@@ -37,7 +37,7 @@ export default function MyCart(props) {
               top: "10%",
               display: "flex",
               flexDirection: "column",
-              marginRight: "5rem",
+              marginRight: "1rem",
               maxWidth: "70%",
               marginLeft: "2rem",
               marginTop: "2rem",
@@ -92,7 +92,7 @@ export default function MyCart(props) {
                 <h1 style={{ color: "black" }}>The Cart</h1>
                 <Button
                   variant="outline-danger"
-                  className="m-2 "
+                  className="clearButton"
                   style={{ width: "10.3rem" }}
                   onClick={() => cart.deletProducts()}
                 >
@@ -100,12 +100,8 @@ export default function MyCart(props) {
                 </Button>
               </div>
             )}
-            <Row>
-              <div
-                className="allItems"
-                responsive="sm"
-                style={{ marginBottom: "5" }}
-              >
+            <Row className="rowResponsive">
+              <div className="allItems" style={{ marginBottom: "5" }}>
                 {cart.data?.products.map((item, index) => {
                   return (
                     <CardItem

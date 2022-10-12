@@ -91,7 +91,7 @@ export default function Account() {
                           />
                         </div>
 
-                        {/* <input type="file" id="customFile" />  */}
+                        <input type="file" id="customFile" />
                         <div
                           className="twoButtons"
                           style={{

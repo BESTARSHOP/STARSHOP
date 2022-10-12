@@ -35,50 +35,56 @@ export default function Order() {
                         {item.product.price * item.amount} $
                       </div>
                     </div>
-
                   </ListGroup>
                 );
               })}
             </ListGroup>
           </div>
-
         </div>
         <div className="towBoxes">
           <div className="payment">
             <div className="div">
-              <h6>Delivery To: {user.data.name}</h6>
+              <h5>
+                Shipping adress
+                <br />
+              </h5>
+              <p className="name">{user.data.name}</p>
               <div className="deliveryToArea">
                 <p>
-
-                  Address: {cart.data.address.street},
-
+                  {cart.data.address.street}
+                  <br />
                   {cart.data.address.zipcode}, {cart.data.address.city}
                 </p>
-                <p>BuyMethode:{cart.data.buyMethode}</p>
+                <p>method of payment : {cart.data.buyMethode}</p>
               </div>
               <h6 className="deliveryArea">
                 Delivery: {moment().add(7, "days").format("DD.MM.YYYY")} &nbsp;
                 - &nbsp;
                 {moment().add(9, "days").format("DD.MM.YYYY")}
               </h6>
+              <Link to={"/myCart"} className="link-button">
+                Edit Your Order
+              </Link>
             </div>
           </div>
           <div className="paymentTwo">
-            <h1 className="h1">Summary</h1>
+            <h2 className="h2">Invoice amount</h2>
             <div className="paragraph"></div>
             <div className="paragraph">
               <p>
-                invoice amount <span className="span">VAT included.</span>
+                <span className="span">VAT included.</span>
               </p>
               <p>{(cart.cartTotal + 5.95).toFixed(2)} $</p>
             </div>
             <hr />
-
-            <Link to={"/thanks"} className="bt-buyNow">Buy Now</Link>
-            <h3>-</h3>
-            <Link to={"/myCart"} className="link-button">
-              Edit Your Order
+            <br />
+            <Link to={"/thanks"} className="bt-buyNow">
+              Buy Now
             </Link>
+            <br />
+            <br />
+            <br />
+            <br />
           </div>
         </div>
       </div>
