@@ -13,7 +13,7 @@ export default function Products() {
   const [productData, setProductData] = useState([]);
   const [filter, setFilter] = useState(productData);
   const [params] = useSearchParams();
-  const [category, setCategory] = useState(params.category || "");
+  const [category, setCategory] = useState(params.get("category"));
 
   const { id } = useParams();
 

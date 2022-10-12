@@ -7,8 +7,6 @@ import StarRating from "../StarRating/StarRating";
 
 export default function ProductCardDescription(props) {
   const [productData, setProductData] = useState([]);
-
-  const [error, setError] = useState();
   const id = props.id;
 
   async function getResponse() {
@@ -64,7 +62,7 @@ export default function ProductCardDescription(props) {
                 Add to Cart
               </Button>
             </div>
-            {error && <div className="error">{error}</div>}
+            {cart.error && <div className="error">{cart.error}</div>}
           </Card.Body>
         </Card>
       </div>
