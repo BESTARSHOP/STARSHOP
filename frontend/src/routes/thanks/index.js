@@ -1,8 +1,17 @@
 import "./index.scss";
 import { BiChevronLeft } from "react-icons/bi";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 export default function Thanks() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/products").then(async (res) => {
+      const products = await res.json();
+      setProducts(products);
+    });
+  }, []);
   return (
     <>
       <div className="thanks">
@@ -18,7 +27,11 @@ export default function Thanks() {
       </div>
       <div className="parrProducte">
         <h2>maybe you are also interested in</h2>
-        <div></div>
+        <div>
+          {products.map((product) => {
+            return <div className="products"></div>;
+          })}
+        </div>
       </div>
       <div className="zurück">
         <Link
