@@ -18,6 +18,11 @@ exports.getCart = async (req, res, next) => {
     await cart.save();
     await req.user.save();
   }
+  if (cart.products.find((row) => !row.product)) {
+    cart.products = cart.products.filter((row) => row.product);
+    await cart.save();
+  }
+
   res.status(200).send(cart);
 };
 

@@ -35,11 +35,13 @@ export default function Order() {
                         {item.product.price * item.amount} $
                       </div>
                     </div>
+
                   </ListGroup>
                 );
               })}
             </ListGroup>
           </div>
+
         </div>
         <div className="towBoxes">
           <div className="payment">
@@ -47,7 +49,9 @@ export default function Order() {
               <h6>Delivery To: {user.data.name}</h6>
               <div className="deliveryToArea">
                 <p>
+
                   Address: {cart.data.address.street},
+
                   {cart.data.address.zipcode}, {cart.data.address.city}
                 </p>
                 <p>BuyMethode:{cart.data.buyMethode}</p>
