@@ -14,12 +14,14 @@ export default function Account() {
   const user = useUser();
   const [email, setEmail] = useState(user.data.email);
   const [name, setName] = useState(user.data.name);
+  const [file, setFile] = useState(null);
 
   const navigate = useNavigate();
   const handleLogout = async () => {
     await user.logout();
     navigate("/login");
   };
+  console.log(file);
   const cart = useCart();
 
   return (
@@ -84,14 +86,33 @@ export default function Account() {
                             marginLeft: "3rem",
                           }}
                         >
-                          <FaUserAlt
-                            size={60}
-                            className=" text-secondary"
-                            style={{ marginTop: "2rem" }}
-                          />
+                          {Boolean(file) || (
+                            <FaUserAlt
+                              size={60}
+                              className=" text-secondary"
+                              style={{ marginTop: "2rem" }}
+                            />
+                          )}
+                          {Boolean(file) && (
+                            <img
+                              src={URL.createObjectURL(file)}
+                              alt="avatar"
+                              style={{
+                                maxWidth: "8rem",
+                              }}
+                            />
+                          )}
                         </div>
 
-                        <input type="file" id="customFile" />
+
+                        {
+                          <input
+                            onChange={(e) => setFile(e.target.files[0])}
+                            accept="image/*"
+                            type="file"
+                          />
+                        }
+
                         <div
                           className="twoButtons"
                           style={{
