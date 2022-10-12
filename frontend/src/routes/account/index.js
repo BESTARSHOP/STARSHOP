@@ -8,9 +8,12 @@ import { BsInstagram } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
 import useCart from "../../hooks/useCart";
+import { useState } from "react";
 
 export default function Account() {
   const user = useUser();
+  const [email, setEmail] = useState(user.data.email);
+  const [name, setName] = useState(user.data.name);
 
   const navigate = useNavigate();
   const handleLogout = async () => {
@@ -36,7 +39,8 @@ export default function Account() {
                       placeholder=""
                       aria-label="First name"
                       className="form-control"
-                      value={user.data.name}
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                     />
                   </div>
                   <div>
@@ -46,7 +50,8 @@ export default function Account() {
                     <input
                       type="email"
                       className="form-control"
-                      value={user.data.email}
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
                 </div>
@@ -62,7 +67,7 @@ export default function Account() {
                     >
                       <h5>Upload your profile photo</h5>
                       <div
-                        class="text-center centerDiv"
+                        className="text-center centerDiv"
                         style={{
                           display: "flex",
                           flexDirection: "column",
@@ -70,7 +75,7 @@ export default function Account() {
                         }}
                       >
                         <div
-                          class="foto square position-relative display-2 mb-3"
+                          className="foto square position-relative display-2 mb-3"
                           style={{
                             border: "1px ",
                             width: "8rem",
@@ -81,7 +86,7 @@ export default function Account() {
                         >
                           <FaUserAlt
                             size={60}
-                            class=" text-secondary"
+                            className=" text-secondary"
                             style={{ marginTop: "2rem" }}
                           />
                         </div>
@@ -97,8 +102,8 @@ export default function Account() {
                           }}
                         >
                           <label
-                            class="btn btn-success-soft btn-block"
-                            for="customFile"
+                            className="btn btn-success-soft btn-block"
+                            htmlFor="customFile"
                             style={{
                               color: "#28a745",
                               backgroundColor: "rgba(40, 167, 69, 0.1)",
@@ -108,7 +113,7 @@ export default function Account() {
                           </label>
                           <button
                             type="button"
-                            class="btn btn-danger-soft"
+                            className="btn btn-danger-soft"
                             style={{
                               color: "#dc3545",
                               backgroundColor: "rgba(220, 53, 69, 0.1)",
@@ -118,19 +123,22 @@ export default function Account() {
                           </button>
                         </div>
 
-                        <p class="text-muted mt-3 mb-0">
-                          <span class="me-1">Note:</span>Minimum size 300px x
-                          300px
+                        <p className="text-muted mt-3 mb-0">
+                          <span className="me-1">Note:</span>Minimum size 300px
+                          x 300px
                         </p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="passwordArea">
-                <div class="passwordArea1">
+              <div className="passwordArea">
+                <div className="passwordArea1">
                   <div className="button-delete-update ">
-                    <button type="button" class="button1 btn btn-danger btn-lg">
+                    <button
+                      type="button"
+                      className="button1 btn btn-danger btn-lg"
+                    >
                       Delete profile
                     </button>
                     <button type="button" className="button2 btn btn-danger">

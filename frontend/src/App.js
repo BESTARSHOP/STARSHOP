@@ -7,6 +7,7 @@ import MyCartRoute from "./routes/myCart";
 import OrderRoute from "./routes/order";
 import ProductRoute from "./routes/product";
 import ProductsRoute from "./routes/products";
+import ThanksRoute from "./routes/thanks";
 import { UserProvieder } from "./hooks/useUser";
 import { CartProvider } from "./hooks/useCart";
 
@@ -24,6 +25,7 @@ export default function App() {
             <Route path="/products" element={<ProductsRoute />} />
             <Route path="/products/:id" element={<ProductsRoute />} />
             <Route path="/product/:id" element={<ProductRoute />} />
+            <Route path="/thanks" element={<ThanksRoute />} />
           </Routes>
         </BrowserRouter>
       </CartProvider>

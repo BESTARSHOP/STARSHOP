@@ -5,6 +5,7 @@ import useCart from "../../hooks/useCart";
 import { Button } from "react-bootstrap";
 import moment from "moment";
 import useUser from "../../hooks/useUser";
+import { Link } from "react-router-dom";
 
 export default function Order() {
   const user = useUser();
@@ -14,29 +15,31 @@ export default function Order() {
       <div className="orderContainer">
         <div className="productsOrder">
           <h1 className="myOrders">My Orders</h1>
-          <ListGroup>
-            {cart.data?.products.map((item) => {
-              return (
-                <ListGroup key={item.products._id} className="listGroup">
-                  <div className="cartInfo">
-                    <div className="img-Titel">
-                      <img
-                        src={item.products.image}
-                        alt={item.products.title}
-                      />
-                      <div className="titelInfo">
-                        <p>{item.products.title}</p>
+          <div className="scrolling">
+            <ListGroup>
+              {cart.data?.products.map((item) => {
+                return (
+                  <ListGroup key={item.product._id} className="listGroup">
+                    <div className="cartInfo">
+                      <div className="img-Titel">
+                        <img
+                          src={item.product.image}
+                          alt={item.product.title}
+                        />
+                        <div className="titelInfo">
+                          <p>{item.product.title}</p>
+                        </div>
+                      </div>
+                      <div className="quantityInfo">{item.amount}</div>
+                      <div className="priceInfo">
+                        {item.product.price * item.amount} $
                       </div>
                     </div>
-                    <div className="quantityInfo">{item.amount}</div>
-                    <div className="priceInfo">
-                      {item.products.price * item.amount} $
-                    </div>
-                  </div>
-                </ListGroup>
-              );
-            })}
-          </ListGroup>
+                  </ListGroup>
+                );
+              })}
+            </ListGroup>
+          </div>
         </div>
         <div className="towBoxes">
           <div className="payment">
@@ -44,7 +47,7 @@ export default function Order() {
               <h6>Delivery To: {user.data.name}</h6>
               <div className="deliveryToArea">
                 <p>
-                  Address: {cart.data.address.street},{" "}
+                  Address: {cart.data.address.street},
                   {cart.data.address.zipcode}, {cart.data.address.city}
                 </p>
                 <p>BuyMethode:{cart.data.buyMethode}</p>
@@ -58,15 +61,7 @@ export default function Order() {
           </div>
           <div className="paymentTwo">
             <h1 className="h1">Summary</h1>
-            <div className="paragraph">
-              <p>Total Price</p>
-              <p> {cart.cartTotal.toFixed(2)} $</p>
-            </div>
-            <div className="paragraph">
-              <p>Shipping</p>
-              <p>5,95 $</p>
-            </div>
-            <hr />
+            <div className="paragraph"></div>
             <div className="paragraph">
               <p>
                 invoice amount <span className="span">VAT included.</span>
@@ -75,7 +70,11 @@ export default function Order() {
             </div>
             <hr />
 
-            <Button className="bt-buyNow">Buy Now</Button>
+            <Link to={"/thanks"} className="bt-buyNow">Buy Now</Link>
+            <h3>-</h3>
+            <Link to={"/myCart"} className="link-button">
+              Edit Your Order
+            </Link>
           </div>
         </div>
       </div>
