@@ -23,7 +23,7 @@ export default function Overview() {
           </div>
           <div className="imgBlock img3">
             <Link to="/products/?category=jewelery" className="button3">
-              VIEW ACCESSORY PRODUCTS
+              VIEW JEWELERY PRODUCTS
             </Link>
           </div>
         </div>

@@ -104,6 +104,7 @@ export default function Account() {
                           )}
                         </div>
 
+
                         {
                           <input
                             onChange={(e) => setFile(e.target.files[0])}
@@ -111,6 +112,7 @@ export default function Account() {
                             type="file"
                           />
                         }
+
                         <div
                           className="twoButtons"
                           style={{

@@ -1,8 +1,8 @@
 .thanks {
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: flex;
   justify-content: center;
-  height: 15rem;
+  height: 10rem;
   margin-left: 2rem;
 
   > .background {
@@ -35,14 +35,57 @@
   }
 }
 .parrProducte {
-  margin-top: 2rem;
-  background-color: #ddc9bc;
   width: 100%;
-  height: 53vh;
+  height: 71vh;
   overflow-x: scroll;
+  padding: 0 1rem;
+
+  > .products {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
 }
 
 .zurück {
   margin-top: 1rem;
   margin-left: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+  .thanks {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    height: 10rem;
+    margin-left: 0;
+
+    > .background {
+      > .transbox {
+        height: 8rem;
+        margin: 20px;
+        opacity: 0.8;
+
+        span {
+          font-size: 2rem;
+          padding: 1rem;
+        }
+      }
+    }
+  }
+  .parrProducte {
+    height: 70vh;
+    overflow-y: scroll;
+
+    > .products {
+      flex-direction: column;
+    }
+  }
+
+  .zurück {
+    > .linkCountinueShopping {
+      width: 20rem !important;
+      font-size: medium !important;
+    }
+  }
 }

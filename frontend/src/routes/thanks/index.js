@@ -2,15 +2,18 @@ import "./index.scss";
 import { BiChevronLeft } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import ProductCard from "../../components/producrCard/ProductCard";
 
 export default function Thanks() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/products").then(async (res) => {
-      const products = await res.json();
-      setProducts(products);
-    });
+    fetch("http://localhost:3001/products?category=jewelery").then(
+      async (res) => {
+        const products = await res.json();
+        setProducts(products);
+      }
+    );
   }, []);
   return (
     <>
@@ -27,9 +30,13 @@ export default function Thanks() {
       </div>
       <div className="parrProducte">
         <h2>maybe you are also interested in</h2>
-        <div>
-          {products.map((product) => {
-            return <div className="products"></div>;
+        <div className="products">
+          {products.map((product, i) => {
+            return (
+              <div>
+                <ProductCard data={product} key={i} />
+              </div>
+            );
           })}
         </div>
       </div>
