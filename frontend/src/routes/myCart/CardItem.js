@@ -1,34 +1,39 @@
-import "./index.scss";
+import "./cardItem.scss";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { Button, Form } from "react-bootstrap";
-import { useCart } from "react-use-cart";
+import useCart from "../../hooks/useCart";
 
 export function CardItem(props) {
-  const { updateItemQuantity, removeItem } = useCart();
+  const cart = useCart();
 
   return (
     <>
-      <hr style={{ width: "75%" }} />
+      <hr className="hr" style={{ width: "90%" }} />
       <div
         key={props.index}
+        className="container"
         style={{
           display: "flex",
-          width: "100rem",
+          width: "100%",
         }}
       >
         <div
+          className="secoundContainer"
           style={{
             display: "flex",
-            justifyContent: "space-between",
+            justifyContent: "space-around",
+            width: "80%",
           }}
         >
           <img
+            className="image"
             src={props.item.image}
             style={{ width: "17rem", height: "17rem" }}
             alt={props.item.title}
           />
 
           <div
+            className="infos"
             style={{
               display: "flex",
               flexDirection: "column",
@@ -50,6 +55,7 @@ export function CardItem(props) {
             </h6>
 
             <div
+              className="formInfos"
               style={{
                 display: "flex",
                 flexDirection: "column",
@@ -57,12 +63,16 @@ export function CardItem(props) {
               }}
             >
               <Form.Select
-                value={props.item.quantity}
+                value={props.amount}
                 onChange={(event) =>
-                  updateItemQuantity(props.item.id, +event.target.value)
+                  cart.updateProduct({
+                    productId: props.item._id,
+                    amount: parseInt(event.target.value),
+                  })
                 }
+                className="form"
                 style={{
-                  width: "7rem",
+                  maxWidth: "7rem",
                 }}
               >
                 <option value="1">1</option>
@@ -78,10 +88,15 @@ export function CardItem(props) {
               </Form.Select>
             </div>
             <Button
-              variant="danger"
-              onClick={() => removeItem(props.item.id)}
+              className="button"
+              variant="outline-danger"
+              onClick={() =>
+                cart.deletProduct({
+                  productId: props.item._id,
+                })
+              }
               style={{
-                width: "10rem",
+                maxWidth: "10rem",
                 display: "flex",
                 gap: "0.5rem",
               }}
@@ -92,14 +107,15 @@ export function CardItem(props) {
           </div>
         </div>
         <div
+          className="price"
           style={{
-            width: "20rem",
+            flexGrow: "0",
             textAlign: "right",
             padding: "2.5rem",
             fontWeight: "bolder",
           }}
         >
-          {props.item.price * props.item.quantity} $
+          {props.item.price * props.amount} $
         </div>
       </div>
     </>

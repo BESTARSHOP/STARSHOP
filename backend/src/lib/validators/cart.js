@@ -4,31 +4,36 @@ const validator = require("../middlewares/valdators");
 exports.addProduct = [
   body("product").isLength({ min: 5 }).withMessage("we need the product_id"),
 
-  body("preis").isLength({ min: 5 }).withMessage("we need the  Price"),
+  body("amount").isNumeric().withMessage("we need the amount"),
 
   validator,
 ];
 
 exports.buyCart = [
-  body("Product").isLength({ min: 5 }).withMessage("we need the products"),
-
-  body("preis").isLength({ min: 5 }).withMessage("we need the  Price"),
+  body("address.street")
+    .isLength({ min: 5 })
+    .withMessage("strreet min 5 Chars "),
+  body("address.zipcode")
+    .isLength({ min: 5 })
+    .withMessage("zipcode min 5 Chars "),
+  body("address.city").isLength({ min: 5 }).withMessage("city min 5 Chars "),
+  body("buyMethode")
+    .isIn(["PayPal", "Visa", "MasterCard", "Discover", "Amex"])
+    .withMessage("buyMethode inveld"),
 
   validator,
 ];
 
 exports.deletProduct = [
-  body("Product").isLength({ min: 5 }).withMessage("we need the products"),
-
-  body("preis").isLength({ min: 5 }).withMessage("we need the  Price"),
+  body("productId").isLength({ min: 5 }).withMessage("we need the products"),
 
   validator,
 ];
 
 exports.updateProduct = [
-  body("Product").isLength({ min: 5 }).withMessage("we need the products"),
+  body("productId").isLength({ min: 5 }).withMessage("we need the products"),
 
-  body("preis").isLength({ min: 5 }).withMessage("we need the  Price"),
+  body("amount").isNumeric().withMessage("we need the  amount"),
 
   validator,
 ];

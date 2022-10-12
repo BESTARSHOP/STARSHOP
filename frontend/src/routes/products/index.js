@@ -37,9 +37,6 @@ export default function Products() {
   useEffect(() => {
     if (id) filterProduct(parseInt(id));
   }, []);
-  // "category": {
-  //   "id":1,
-  //   "name": "men's clothing" }
 
   return (
     <>
@@ -65,13 +62,13 @@ export default function Products() {
               women's clothing
             </button>
             <button
-              className="button products-women-button"
+              className="button products-electronics-button"
               onClick={() => setCategory("electronics")}
             >
               electronics
             </button>
             <button
-              className="button products-women-button"
+              className="button products-jewelery-button"
               onClick={() => setCategory("jewelery")}
             >
               jewelery
@@ -87,12 +84,7 @@ export default function Products() {
               xl={4}
               className="mb-3 mx-auto text-center"
             >
-              <InputGroup
-                id="inputGroup"
-                style={{
-                  margin: "2rem",
-                }}
-              >
+              <InputGroup id="inputGroup">
                 <input
                   type="text"
                   name="search"

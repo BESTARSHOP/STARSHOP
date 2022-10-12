@@ -1,12 +1,12 @@
 .Login {
-  margin-top: 100px;
+  margin-top: 7rem;
   display: flex;
   justify-content: center;
-  height: 400px;
+  height: 25rem;
 
   > .box {
     border: 1px solid;
-    width: 500px;
+    width: 30rem;
     padding: 20px;
     border-radius: 5px;
     background-color: white;
@@ -19,12 +19,12 @@
     > .input-group {
       display: flex;
       align-items: center;
-      margin-top: 20px;
+      margin-top: 1rem;
 
       > .label {
-        width: 150px;
+        width: 10rem;
         text-align: right;
-        margin-right: 20px;
+        margin-right: 1rem;
       }
 
       > input {
@@ -35,14 +35,14 @@
 
     > .toggle-register {
       text-align: right;
-      margin-top: 20px;
+      margin-top: 1.5rem;
       font-weight: bold;
       color: #1a5eaa;
       cursor: pointer;
     }
 
     > button {
-      margin-top: 30px;
+      margin-top: 2rem;
       cursor: pointer;
       width: 100%;
       padding: 10px;
@@ -54,7 +54,17 @@
     }
     > .error {
       color: red;
-      margin-top: 10px;
+      margin-top: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .Login {
+    margin: 2rem 0;
+    height: 28rem;
+
+    > .box {
     }
   }
 }
