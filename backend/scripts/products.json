@@ -4,7 +4,7 @@
     "title": "women Accesories",
     "price": 109.95,
     "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-    "category": "jewelery & Accesories",
+    "category": "jewelery",
     "image": "http://localhost:3001/images/11-07-36.png",
     "rating": {
       "rate": 3.9,
@@ -40,7 +40,7 @@
     "title": "Mens Casual Slim Fit",
     "price": 15.99,
     "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
-    "category": "men's clothing",
+    "category": "women's clothing",
     "image": "http://localhost:3001/images/11-14-08.png",
     "rating": {
       "rate": 2.1,
@@ -49,10 +49,10 @@
   },
   {
     "id": 5,
-    "title": "women's jewelery & Accesories",
+    "title": "women's jewelery",
     "price": 695,
     "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
-    "category": "jewelery & Accesories",
+    "category": "jewelery",
     "image": "http://localhost:3001/images/11-08-22.png",
     "rating": {
       "rate": 4.6,
@@ -64,7 +64,7 @@
     "title": "Solid Gold Petite Micropave ",
     "price": 168,
     "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
-    "category": "jewelery & Accesories",
+    "category": "jewelery",
     "image": "http://localhost:3001/images/11-07-06.png",
     "rating": {
       "rate": 3.9,
@@ -88,7 +88,7 @@
     "title": "Pierced Owl Rose Gold Plated Stainless Steel Double",
     "price": 10.99,
     "description": "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
-    "category": "jewelery & Accesories",
+    "category": "jewelery",
     "image": "http://localhost:3001/images/11-10-09.png",
     "rating": {
       "rate": 1.9,
@@ -252,7 +252,7 @@
     "title": "Womens Accesories",
     "price": 8.99,
     "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
-    "category": "jewelery & Accesories",
+    "category": "jewelery",
     "image": "http://localhost:3001/images/13-48-46.png",
     "rating": {
       "rate": 1.6,
@@ -264,7 +264,7 @@
     "title": "Womens Accesories",
     "price": 17.99,
     "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
-    "category": "jewelery & Accesories",
+    "category": "jewelery",
     "image": "http://localhost:3001/images/13-49-00.png",
     "rating": {
       "rate": 3.6,
@@ -276,7 +276,7 @@
     "title": "Womens Accesories",
     "price": 11.0,
     "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
-    "category": "jewelery & Accesories",
+    "category": "jewelery",
     "image": "http://localhost:3001/images/13-49-37.png",
     "rating": {
       "rate": 4.6,
@@ -288,7 +288,7 @@
     "title": "Womens Accesories",
     "price": 19.1,
     "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
-    "category": "jewelery & Accesories",
+    "category": "jewelery",
     "image": "http://localhost:3001/images/13-49-54.png",
     "rating": {
       "rate": 5.6,
@@ -300,7 +300,7 @@
     "title": "Womens Accesories",
     "price": 10.0,
     "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
-    "category": "jewelery & Accesories",
+    "category": "jewelery",
     "image": "http://localhost:3001/images/13-50-25.png",
     "rating": {
       "rate": 2.6,
@@ -312,7 +312,7 @@
     "title": "Womens Accesories",
     "price": 17.0,
     "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
-    "category": "jewelery & Accesories",
+    "category": "jewelery",
     "image": "http://localhost:3001/images/13-52-41.png",
     "rating": {
       "rate": 3.6,
@@ -324,7 +324,7 @@
     "title": "Womens Accesories",
     "price": 28.0,
     "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
-    "category": "jewelery & Accesories",
+    "category": "jewelery",
     "image": "http://localhost:3001/images/13-53-13.png",
     "rating": {
       "rate": 5.6,
@@ -336,7 +336,7 @@
     "title": "Womens Accesories",
     "price": 18.0,
     "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
-    "category": "jewelery & Accesories",
+    "category": "jewelery",
     "image": "http://localhost:3001/images/13-53-28.png",
     "rating": {
       "rate": 4.6,
@@ -348,7 +348,7 @@
     "title": "Womens Accesories",
     "price": 11.0,
     "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
-    "category": "jewelery & Accesories",
+    "category": "jewelery",
     "image": "http://localhost:3001/images/13-53-49.png",
     "rating": {
       "rate": 5.6,
@@ -360,7 +360,7 @@
     "title": "Womens Accesories",
     "price": 9.0,
     "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
-    "category": "jewelery & Accesories",
+    "category": "jewelery",
     "image": "http://localhost:3001/images/13-54-03.png",
     "rating": {
       "rate": 4.6,
@@ -372,7 +372,7 @@
     "title": "Womens Accesories",
     "price": 8.0,
     "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
-    "category": "jewelery & Accesories",
+    "category": "jewelery",
     "image": "http://localhost:3001/images/13-54-46.png",
     "rating": {
       "rate": 2.6,
@@ -384,7 +384,7 @@
     "title": "Womens Accesories",
     "price": 14.0,
     "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
-    "category": "jewelery & Accesories",
+    "category": "jewelery",
     "image": "http://localhost:3001/images/13-56-06.png",
     "rating": {
       "rate": 5.6,
@@ -396,7 +396,7 @@
     "title": "Womens Accesories",
     "price": 12.0,
     "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
-    "category": "jewelery & Accesories",
+    "category": "jewelery",
     "image": "http://localhost:3001/images/13-57-33.png",
     "rating": {
       "rate": 4.6,
@@ -408,7 +408,7 @@
     "title": "Womens Accesories",
     "price": 15.0,
     "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
-    "category": "jewelery & Accesories",
+    "category": "jewelery",
     "image": "http://localhost:3001/images/13-58-20.png",
     "rating": {
       "rate": 5.6,
@@ -420,7 +420,7 @@
     "title": "Womens Accesories",
     "price": 17.0,
     "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
-    "category": "jewelery & Accesories",
+    "category": "jewelery",
     "image": "http://localhost:3001/images/13-58-35.png",
     "rating": {
       "rate": 1.6,
@@ -432,7 +432,7 @@
     "title": "Womens Accesories",
     "price": 13.0,
     "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
-    "category": "jewelery & Accesories",
+    "category": "jewelery",
     "image": "http://localhost:3001/images/13-58-50.png",
     "rating": {
       "rate": 2.6,
@@ -444,7 +444,7 @@
     "title": "Womens Accesories",
     "price": 12.0,
     "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
-    "category": "jewelery & Accesories",
+    "category": "jewelery",
     "image": "http://localhost:3001/images/14-00-47.png",
     "rating": {
       "rate": 4.6,
@@ -456,7 +456,7 @@
     "title": "Man Accesories",
     "price": 15.0,
     "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
-    "category": "jewelery & Accesories",
+    "category": "jewelery",
     "image": "http://localhost:3001/images/14-10-42.png",
     "rating": {
       "rate": 5.6,
