@@ -10,6 +10,9 @@ import { Link } from "react-router-dom";
 export default function Order() {
   const user = useUser();
   const cart = useCart();
+  if (!cart.data || !user.data) {
+    return;
+  }
   return (
     <Layout>
       <div className="orderContainer">
