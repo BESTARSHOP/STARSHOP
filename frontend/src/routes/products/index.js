@@ -15,8 +15,6 @@ export default function Products() {
   const [params] = useSearchParams();
   const [category, setCategory] = useState(params.get("category") || "");
 
-  const { id } = useParams();
-
   async function getResponse() {
     const res = await fetch(
       "http://localhost:3001/products?category=" + category
@@ -28,15 +26,6 @@ export default function Products() {
   useEffect(() => {
     getResponse();
   }, [category]);
-
-  const filterProduct = (cat) => {
-    const results = productData.filter((x) => x.category === cat);
-    setFilter(results);
-    console.log(results, cat);
-  };
-  useEffect(() => {
-    if (id) filterProduct(parseInt(id));
-  }, []);
 
   return (
     <>

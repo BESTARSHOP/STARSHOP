@@ -65,7 +65,7 @@ export function CartProvider(props) {
     },
     addProduct: async (body) => {
       if (!user.data) {
-        setError("Not login");
+        setError("you are not logged in");
         return;
       }
       setError("");

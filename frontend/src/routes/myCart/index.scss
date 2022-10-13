@@ -110,6 +110,7 @@
     position: initial !important;
     margin-top: 0 !important;
     max-width: 100% !important;
+    margin-left: 0 !important;
 
     > .rowResponsive {
       width: 100% !important;
@@ -149,9 +150,10 @@
   }
 
   .payment-boxes {
-    margin-left: 7%;
+    margin: 0 auto;
     position: initial;
     margin-top: 5rem;
+    width: 100% !important;
   }
   .boxes {
     display: flex;
@@ -160,7 +162,7 @@
   }
 
   .payment1 {
-    width: 20rem;
+    width: 23rem;
 
     > .paragraph {
       padding: 0 1rem;
@@ -173,7 +175,7 @@
   }
 
   .payment2 {
-    width: 20rem;
+    width: 23rem;
     padding-left: 0.5rem;
   }
 }
