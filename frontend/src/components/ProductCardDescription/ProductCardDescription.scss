@@ -25,7 +25,7 @@
 
     > .card {
       text-align: center;
-      background: #efeae3;
+      background: #ffffff;
       margin: 5rem 0rem 5rem 2rem;
       border: 1px;
 
@@ -37,12 +37,12 @@
 
       > .card-body > .card-title2 > .costs {
         font-size: small;
-        color: brown;
+        color: gray;
       }
       > .card-body > .card-title2 > .rating {
         display: flex;
         align-items: center;
-        border: 1px solid brown;
+
         margin: 0 auto;
         width: 11rem;
         gap: 1rem;
@@ -51,7 +51,7 @@
       > .card-body > .buttons > #link-go-to-card,
       #link-add-to-card {
         position: relative;
-        background: #efeae3;
+        background: var(--background);
         color: black;
         border: solid 1px black;
         border-radius: 10px;
@@ -68,7 +68,7 @@
       }
       > .card-body > .buttons > #link-go-to-card:hover,
       #link-add-to-card:hover {
-        background-color: #ddc9bc;
+        background-color: var(--accent);
       }
     }
   }

@@ -12,9 +12,10 @@ export default function ProductCard(props) {
       style={{
         width: "19.4rem",
         height: "34rem",
-        backgroundColor: " #ddc9bc",
+        backgroundColor: "#ffffff",
+        border: "1px solid #dddddd",
       }}
-      className={`text-center p-0 overflow-hidden shadow mx-auto mb-4`}
+      className={`text-center p-0 overflow-hidden  mx-auto mb-4`}
     >
       <div
         className={{
@@ -52,23 +53,7 @@ export default function ProductCard(props) {
           </div>
           <div>({rating.count})</div>
         </div>
-        <Link
-          to={"/product/" + _id}
-          className={`d-flex `}
-          style={{
-            background: "#EFEAE3",
-            color: "black",
-            border: "solid 1px black",
-            borderRadius: "10px",
-            width: "10rem",
-            height: "6vh",
-            fontSize: "large",
-            alignItems: "center",
-            paddingLeft: "1.6rem",
-            margin: "2rem 4rem",
-            textDecoration: "none",
-          }}
-        >
+        <Link to={"/product/" + _id} className={`d-flex viewButtons`}>
           View Product
         </Link>
       </Card.Body>

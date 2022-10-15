@@ -1,5 +1,5 @@
 .products {
-  background-color: #efeae3;
+  background-color: #ececec;
   width: 99.3%;
   height: auto;
 
@@ -9,7 +9,7 @@
 
     > .button {
       color: black;
-      background-color: #efeae3;
+      background-color: #ffffff;
       padding: 10px 20px;
       border-radius: 5px;
       font-size: large;
@@ -17,12 +17,13 @@
       width: 13rem;
       margin-top: 2rem;
       text-decoration: none;
-      border: 1px solid black;
+      border: 1px solid #dddddd;
       text-align: center;
     }
     > .button:hover {
-      background-color: #a3693d;
-      color: white;
+      background-color: var(--accent);
+      border: none;
+      color: black;
       transition: 0.5s ease;
       box-shadow: 3px 3px 20px black;
       font-size: 22px;
@@ -38,7 +39,7 @@
     border: 2px solid #ccc;
     border-radius: 30px;
     font-size: 16px;
-    background-color: #efeae3;
+    background-color: #ffffff;
     background-position: 5px 10px;
     background-size: 1.8rem;
     background-repeat: no-repeat;

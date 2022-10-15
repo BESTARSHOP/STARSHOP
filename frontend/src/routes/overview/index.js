@@ -54,6 +54,9 @@ export default function Overview() {
         <div className="footer-contact">
           <p>You can also find us here</p>
           <div className="footer-icons">
+            <a className="footer-icons-facebook" href="https://facebook.com">
+              <BsFacebook />
+            </a>
             <a
               className="footer-icons-instagram"
               href="https://www.instagram.com/"
@@ -62,9 +65,6 @@ export default function Overview() {
             </a>
             <a className="footer-icons-twitter" href="https://twitter.com/">
               <BsTwitter />
-            </a>
-            <a className="footer-icons-facebook" href="https://facebook.com">
-              <BsFacebook />
             </a>
           </div>
         </div>
