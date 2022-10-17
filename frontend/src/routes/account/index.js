@@ -171,7 +171,7 @@ export default function Account() {
           )}
         </div>
         <div className="orderList">
-          <h2>my Past Orders</h2>
+          <h2>My Past Orders</h2>
           <div className="scrolling">
             <ListGroup>
               {cart.data?.products.map((item) => {
