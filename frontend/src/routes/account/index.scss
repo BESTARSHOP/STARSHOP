@@ -12,12 +12,14 @@
     grid-area: order;
     margin-top: 2rem;
     margin-left: 4rem;
-    overflow-y: scroll;
     max-height: 65vh;
+  }
+  .scrolling {
+    overflow-y: scroll;
   }
 
   .listGroupAccount {
-    background-color: #efeae2 !important;
+    background-color: #ffffff !important;
     display: flex;
     padding: 1rem;
 
@@ -122,6 +124,13 @@
             .button2 {
               width: 10rem;
               font-size: medium;
+              border: 1px solid red;
+              color: red;
+            }
+            > .button1:hover,
+            .button2:hover {
+              background-color: red;
+              color: white;
             }
           }
         }
@@ -137,7 +146,8 @@
   .footerAccount {
     grid-area: footer;
     min-height: 10rem;
-    background-color: #ddc9bc;
+    background-color: #111111;
+    color: #888888;
     font-size: small;
     display: flex;
     justify-content: space-around;
@@ -163,10 +173,10 @@
           color: red;
         }
         > .footer-icons-twitter {
-          color: blue;
+          color: rgb(101, 158, 250);
         }
         > .footer-icons-facebook {
-          color: indigo;
+          color: blue;
         }
       }
     }
@@ -189,7 +199,6 @@
     }
 
     .listGroupAccount {
-      background-color: #efeae2 !important;
       display: flex;
       padding: 1rem;
       width: 100% !important;
@@ -258,7 +267,7 @@
           }
           > .uploadArea {
             > .first > .secound > .centerDiv > .foto {
-              margin-left: 5.5rem !important;
+              margin-left: 6.5rem !important;
             }
             > .first > .secound > .centerDiv > .twoButtons {
               margin-left: 4rem !important;
@@ -287,12 +296,13 @@
       grid-area: logout;
       margin-left: 33%;
       margin-bottom: 1rem;
+      margin-top: 4rem;
     }
 
     .footerAccount {
       grid-area: footer;
       min-height: 10rem;
-      background-color: #ddc9bc;
+
       font-size: small;
       display: flex;
       justify-content: space-around;
@@ -313,16 +323,6 @@
           flex-direction: row;
           gap: 2rem;
           font-size: large;
-
-          > .footer-icons-instagram {
-            color: red;
-          }
-          > .footer-icons-twitter {
-            color: blue;
-          }
-          > .footer-icons-facebook {
-            color: indigo;
-          }
         }
       }
     }

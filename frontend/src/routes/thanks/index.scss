@@ -1,36 +1,18 @@
 .thanks {
-  margin-top: 1rem;
   display: flex;
   justify-content: center;
-  height: 10rem;
-  margin-left: 2rem;
+  height: 9rem;
+  margin: 1rem 2rem;
 
-  > .background {
-    > .transbox {
-      margin: 30px;
-      background-color: #ffffff;
-      opacity: 0.8;
+  > .transbox {
+    margin: 2rem;
+    background-color: #efefef;
 
-      span {
-        font-size: 4rem;
-        font-weight: bold;
-        padding: 0 1rem;
-      }
-      .spanT {
-        color: hsl(0, 80%, 50%);
-      }
-      .spanY {
-        color: hsl(225, 80%, 50%);
-      }
-      .spanF {
-        color: hsl(45, 80%, 50%);
-      }
-      .spanY2 {
-        color: hsl(180, 81%, 40%);
-      }
-      .spanO {
-        color: hsl(90, 89%, 32%);
-      }
+    span {
+      font-size: 4rem;
+      font-weight: bold;
+      padding: 0 1rem;
+      color: var(--accent);
     }
   }
 }
@@ -50,26 +32,23 @@
 .zurück {
   margin-top: 1rem;
   margin-left: 1rem;
+  margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 800px) {
   .thanks {
-    margin-top: 1rem;
     display: flex;
     justify-content: center;
     height: 10rem;
-    margin-left: 0;
+    margin: 1rem 1rem;
 
-    > .background {
-      > .transbox {
-        height: 8rem;
-        margin: 20px;
-        opacity: 0.8;
+    > .transbox {
+      margin: 0;
 
-        span {
-          font-size: 2rem;
-          padding: 1rem;
-        }
+      padding: 2rem;
+
+      span {
+        font-size: xx-large;
       }
     }
   }
@@ -85,7 +64,8 @@
   .zurück {
     > .linkCountinueShopping {
       width: 20rem !important;
-      font-size: medium !important;
+      font-size: large !important;
+      margin: 0 auto;
     }
   }
 }

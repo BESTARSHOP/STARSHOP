@@ -5,7 +5,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Row, Col, InputGroup } from "react-bootstrap";
 import SearchFilter from "react-filter-search";
 import ProductCard from "../../components/producrCard/ProductCard";
-import { useParams } from "react-router-dom";
 import { useSearchParams } from "react-router-dom";
 
 export default function Products() {

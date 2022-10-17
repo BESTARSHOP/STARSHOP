@@ -17,7 +17,7 @@
 
 .payment1 {
   border: 2px solid black;
-  background-color: #ddc9bc;
+  background-color: #ffffff;
   width: 30rem;
   height: 36rem;
   margin-right: 2rem;
@@ -48,7 +48,7 @@
     align-items: center;
     margin-left: 16%;
     padding: 0.5rem;
-    background-color: #efeae2;
+    background-color: var(--accent);
     border: 1px solid black;
     color: black;
     text-decoration: none;
@@ -69,7 +69,7 @@
 
 .payment2 {
   border: 2px solid black;
-  background-color: #ddc9bc;
+  background-color: #ffffff;
   width: 30rem;
   height: 11rem;
   margin-right: 2rem;
@@ -104,13 +104,13 @@
 @media screen and (max-width: 800px) {
   .großeConteiner {
     flex-direction: column;
+    margin-left: 1rem !important;
   }
 
   .containerPos {
     position: initial !important;
-    margin-top: 0 !important;
+    margin: 0 1rem !important;
     max-width: 100% !important;
-    margin-left: 0 !important;
 
     > .rowResponsive {
       width: 100% !important;

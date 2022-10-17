@@ -128,15 +128,15 @@ export default function Account() {
                             className="btn btn-success-soft btn-block"
                             htmlFor="file"
                             style={{
-                              color: "#28a745",
-                              backgroundColor: "rgba(40, 167, 69, 0.1)",
+                              color: "#dc3545",
+                              backgroundColor: "rgba(220, 53, 69, 0.1)",
                             }}
                           >
                             Upload
                           </label>
                           <button
                             type="button"
-                            className="btn btn-danger-soft"
+                            className="btn btn-success-soft btn-block"
                             style={{
                               color: "#dc3545",
                               backgroundColor: "rgba(220, 53, 69, 0.1)",
@@ -158,13 +158,10 @@ export default function Account() {
               <div className="passwordArea">
                 <div className="passwordArea1">
                   <div className="button-delete-update ">
-                    <button
-                      type="button"
-                      className="button1 btn btn-danger btn-lg"
-                    >
+                    <button type="button" className="button1 btn  btn-lg">
                       Delete profile
                     </button>
-                    <button type="button" className="button2 btn btn-danger">
+                    <button type="button" className="button2 btn ">
                       Update profile
                     </button>
                   </div>
@@ -174,27 +171,35 @@ export default function Account() {
           )}
         </div>
         <div className="orderList">
-          <h2>my Order</h2>
-          <ListGroup>
-            {cart.data?.products.map((item) => {
-              return (
-                <ListGroup key={item.product._id} className="listGroupAccount">
-                  <div className="cartInfoAccount">
-                    <div className="img-TitelAccount">
-                      <img src={item.product.image} alt={item.product.title} />
-                      <div className="titelInfoAccount">
-                        <p>{item.product.title}</p>
+          <h2>my Past Orders</h2>
+          <div className="scrolling">
+            <ListGroup>
+              {cart.data?.products.map((item) => {
+                return (
+                  <ListGroup
+                    key={item.product._id}
+                    className="listGroupAccount"
+                  >
+                    <div className="cartInfoAccount">
+                      <div className="img-TitelAccount">
+                        <img
+                          src={item.product.image}
+                          alt={item.product.title}
+                        />
+                        <div className="titelInfoAccount">
+                          <p>{item.product.title}</p>
+                        </div>
+                      </div>
+                      <div className="quantityInfoAccount">{item.amount}</div>
+                      <div className="priceInfoAccount">
+                        {item.product.price * item.amount} $
                       </div>
                     </div>
-                    <div className="quantityInfoAccount">{item.amount}</div>
-                    <div className="priceInfoAccount">
-                      {item.product.price * item.amount} $
-                    </div>
-                  </div>
-                </ListGroup>
-              );
-            })}
-          </ListGroup>
+                  </ListGroup>
+                );
+              })}
+            </ListGroup>
+          </div>
         </div>
         <div className="button-logout">
           <button
@@ -204,7 +209,7 @@ export default function Account() {
               height: "3rem",
 
               marginTop: "1.5rem",
-              background: "#DDC9BC",
+              background: "#ffffff",
             }}
           >
             Logout
