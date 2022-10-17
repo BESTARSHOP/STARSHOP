@@ -90,12 +90,13 @@ export default function Login() {
 
   return (
     <Layout>
+      <div className="backgroundImg"></div>
       <div className="Login">
         <form className="box" onSubmit={handeleLoginClick}>
           <h1 className="h1-login">Login</h1>
           <p>Log in to your STAR SHOP account.</p>
           <hr />
-          <div className="input-group">
+          <div className="input-group-login">
             <div className="label">Email</div>
             <input
               type="email"
@@ -105,7 +106,7 @@ export default function Login() {
             />
           </div>
 
-          <div className="input-group">
+          <div className="input-group-login">
             <div className="label">Password</div>
             <input
               type="password"

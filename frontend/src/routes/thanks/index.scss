@@ -1,7 +1,7 @@
 .thanks {
   display: flex;
   justify-content: center;
-  height: 9rem;
+  height: 8.3rem;
   margin: 1rem 2rem;
 
   > .transbox {
@@ -14,6 +14,34 @@
       padding: 0 1rem;
       color: var(--accent);
     }
+    > .spanT {
+      opacity: 0;
+      animation: fadein 1s linear 1s forwards;
+    }
+    > .spanY {
+      opacity: 0;
+      animation: fadein 1s linear 1.4s forwards;
+    }
+    > .spanF {
+      opacity: 0;
+      animation: fadein 1s linear 1.8s forwards;
+    }
+    > .spanY2 {
+      opacity: 0;
+      animation: fadein 1s linear 2.2s forwards;
+    }
+    > .spanO {
+      opacity: 0;
+      animation: fadein 1s linear 2.6s forwards;
+    }
+    @keyframes fadein {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
   }
 }
 .parrProducte {
@@ -21,6 +49,10 @@
   height: 71vh;
   overflow-x: scroll;
   padding: 0 1rem;
+
+  > h2 {
+    text-align: center;
+  }
 
   > .products {
     display: flex;
@@ -33,6 +65,8 @@
   margin-top: 1rem;
   margin-left: 1rem;
   margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (max-width: 800px) {

@@ -43,8 +43,6 @@ export default function Thanks() {
           to="/products"
           className="linkCountinueShopping"
           style={{
-            display: "flex",
-            alignItems: "center",
             width: "35rem",
             textDecoration: "none",
             color: "black",
@@ -52,7 +50,6 @@ export default function Thanks() {
             padding: "10px 20px",
             borderRadius: "5px",
             fontSize: "x-large",
-
             fontFamily: "Cutive Mono",
             fontWeight: "bold",
             border: "1px solid black",
