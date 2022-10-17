@@ -1,4 +1,3 @@
-import "./index.scss";
 import Layout from "../../Layout";
 import { useParams } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";

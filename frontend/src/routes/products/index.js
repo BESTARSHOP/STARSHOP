@@ -5,7 +5,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Row, Col, InputGroup } from "react-bootstrap";
 import SearchFilter from "react-filter-search";
 import ProductCard from "../../components/producrCard/ProductCard";
-import { useParams } from "react-router-dom";
 import { useSearchParams } from "react-router-dom";
 
 export default function Products() {
@@ -14,8 +13,6 @@ export default function Products() {
   const [filter, setFilter] = useState(productData);
   const [params] = useSearchParams();
   const [category, setCategory] = useState(params.get("category") || "");
-
-  const { id } = useParams();
 
   async function getResponse() {
     const res = await fetch(
@@ -28,15 +25,6 @@ export default function Products() {
   useEffect(() => {
     getResponse();
   }, [category]);
-
-  const filterProduct = (cat) => {
-    const results = productData.filter((x) => x.category === cat);
-    setFilter(results);
-    console.log(results, cat);
-  };
-  useEffect(() => {
-    if (id) filterProduct(parseInt(id));
-  }, []);
 
   return (
     <>

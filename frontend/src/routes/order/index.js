@@ -2,7 +2,6 @@ import "./index.scss";
 import Layout from "../../Layout";
 import ListGroup from "react-bootstrap/ListGroup";
 import useCart from "../../hooks/useCart";
-import { Button } from "react-bootstrap";
 import moment from "moment";
 import useUser from "../../hooks/useUser";
 import { Link } from "react-router-dom";

@@ -53,7 +53,7 @@ export default function MyCart(props) {
                     height: "15rem",
                     padding: "20px",
                     borderRadius: "5px",
-                    backgroundColor: " #ddc9bc",
+                    backgroundColor: "#ffffff ",
                     display: "flex",
                     flexDirection: "column",
                     gap: "2rem",
@@ -72,11 +72,11 @@ export default function MyCart(props) {
                       width: "25rem",
                       textDecoration: "none",
                       color: "black",
-                      background: "#ddc9bc",
+                      background: "var(--accent)",
                       padding: "10px 20px",
                       borderRadius: "5px",
                       fontSize: "x-large",
-                      opacity: "0.6",
+
                       fontFamily: "Cutive Mono",
                       fontWeight: "bold",
                       border: "1px solid black",
@@ -118,7 +118,7 @@ export default function MyCart(props) {
                   style={{
                     position: "fixed",
                     bottom: 0,
-                    background: "#ddc9bc",
+                    background: "var(--background)",
                     textAlign: "right",
                     width: "65rem",
                   }}
@@ -155,8 +155,7 @@ export default function MyCart(props) {
                       <Form.Control
                         value={address}
                         onChange={(e) => setAddress(e.target.value)}
-                        placeholder="1234 Main St"
-                        style={{ backgroundColor: " #efeae2" }}
+                        style={{ backgroundColor: "var(--background)" }}
                       />
                     </Form.Group>
                     <Row className="mb-3">
@@ -165,7 +164,7 @@ export default function MyCart(props) {
                         <Form.Control
                           value={city}
                           onChange={(e) => setCity(e.target.value)}
-                          style={{ backgroundColor: " #efeae2" }}
+                          style={{ backgroundColor: "var(--background)" }}
                         />
                       </Form.Group>
 
@@ -174,7 +173,7 @@ export default function MyCart(props) {
                         <Form.Control
                           value={zip}
                           onChange={(e) => setZip(e.target.value)}
-                          style={{ backgroundColor: " #efeae2" }}
+                          style={{ backgroundColor: " var(--background)" }}
                         />
                       </Form.Group>
                     </Row>
@@ -182,7 +181,7 @@ export default function MyCart(props) {
                       <Form.Select
                         value={buyMethode}
                         onChange={(e) => setBuyMethode(e.target.value)}
-                        style={{ backgroundColor: " #efeae2" }}
+                        style={{ backgroundColor: " var(--background)" }}
                       >
                         <option value="PayPal">PayPal</option>
                         <option value="Visa">Visa</option>

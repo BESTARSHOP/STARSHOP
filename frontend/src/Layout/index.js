@@ -28,7 +28,7 @@ export default function Layout(props) {
         <div className="header-right">
           {user.data && <h3>{user.data.name}</h3>}
           <Link to={accountLink} className="icon-account">
-            <FaUserAlt size={35} color="black" />
+            <FaUserAlt size={35} color="#ececec" />
           </Link>
           <button>
             <Link to="/myCart" className="icon-myCart">

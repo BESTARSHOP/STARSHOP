@@ -1,7 +1,7 @@
 .overview {
   height: calc(86vh - 5rem);
   display: flex;
-  gap: 1rem;
+  padding: 1rem 0;
 
   > .imgBlock {
     position: relative;
@@ -16,7 +16,7 @@
       height: 3rem;
       text-decoration: none;
       color: black;
-      background: #efede2;
+      background: var(--background);
       padding: 10px 16px;
       border-radius: 5px;
       font-size: medium;
@@ -29,6 +29,21 @@
     > .button:hover {
       opacity: 1;
     }
+  }
+  > .img1 {
+    background-image: url(../../images/Best_Male_Model_Poses_for_Men_-_Male_Standing_Poses_-_Sunny_16_1024x1024.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease-in-out;
+  }
+  > .img1:hover {
+    background-image: url(../../images/istockphoto-531253518-612x612.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
   }
   > .doppelBlock {
     display: flex;
@@ -56,8 +71,9 @@
         height: 3rem;
         text-decoration: none;
         color: black;
-        background: #efede2;
-        padding: 10px 16px;
+        background: var(--background);
+
+        padding: 10px 35px;
         border-radius: 5px;
         font-size: medium;
         transform: translateX(-50%);
@@ -93,8 +109,8 @@
         height: 3rem;
         text-decoration: none;
         color: black;
-        background: #efede2;
-        padding: 10px 16px;
+        background: var(--background);
+        padding: 10px 50px;
         border-radius: 5px;
         font-size: medium;
         transform: translateX(-50%);
@@ -114,27 +130,12 @@
       background-size: cover;
     }
   }
-  > .img1 {
-    background-image: url(../../images/Best_Male_Model_Poses_for_Men_-_Male_Standing_Poses_-_Sunny_16_1024x1024.webp);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    transition: 0.5s ease-in-out;
-  }
-  > .img1:hover {
-    background-image: url(../../images/istockphoto-531253518-612x612.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
 
   > .img4 {
     background-image: url(../../images/d3bb70c98cecbcd6c1c6e95624b6de9d.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     width: 100%;
     height: 100%;
     transition: 0.5s ease-in-out;
@@ -143,9 +144,23 @@
     background-image: url(../../images/agg99615_mustard_xl.jpeg);
     background-repeat: no-repeat;
 
-    background-size: cover;
+    background-size: contain;
   }
   @media screen and (max-width: 800px) {
+    > .img1 {
+      background-size: cover;
+    }
+    > .img1:hover {
+      background-size: cover;
+    }
+
+    > .img4 {
+      background-size: cover;
+    }
+    > .img4:hover {
+      background-size: cover;
+    }
+
     .doppelBlock {
       display: none;
     }
@@ -162,7 +177,8 @@
 }
 .footer {
   position: relative;
-  background-color: #ddc9bc;
+  background-color: #111111;
+  color: #888888;
   width: 100%;
   height: 100%;
   font-size: small;
@@ -183,16 +199,16 @@
       display: flex;
       flex-direction: row;
       gap: 2rem;
-      font-size: large;
+      font-size: x-large;
 
       > .footer-icons-instagram {
         color: red;
       }
       > .footer-icons-twitter {
-        color: blue;
+        color: rgb(101, 158, 250);
       }
       > .footer-icons-facebook {
-        color: indigo;
+        color: blue;
       }
     }
   }
@@ -206,127 +222,3 @@
     padding: 1rem 20px;
   }
 }
-
-// for Tablet
-// @media only screen and (max-width: 1000px) {
-//   .overview {
-//     > .products-fotos {
-//       flex-direction: column;
-//       > .logo-1 {
-//         height: 55vh !important;
-
-//         > .view-button-1 {
-//           margin-left: 21.5rem;
-//           margin-bottom: 13rem;
-//         }
-//       }
-
-//       > .twoImages > .logo-2 {
-//         width: 80%;
-//         margin-left: 6.5rem;
-
-//         > .view-button-2 {
-//           margin-left: 16rem;
-//           top: 57rem;
-//         }
-//       }
-
-//       > .twoImages > .logo-3 {
-//         width: 80%;
-//         margin-left: 6.5rem;
-
-//         > .view-button-3 {
-//           height: 2.7rem;
-//           top: 80rem;
-//           margin-left: 16rem;
-//         }
-//       }
-
-//       > .logo-4 {
-//         height: 55vh !important;
-//         margin-top: 1rem;
-
-//         > .view-button-4 {
-//           top: 26rem !important;
-//           margin-left: 21.5rem;
-
-//           height: 2.7rem;
-//         }
-//       }
-//     }
-
-//     > .footer {
-//       position: absolute;
-//       font-size: xx-small;
-
-//       > .footer-contact {
-//         font-size: small;
-
-//         > .footer-icons {
-//           font-size: medium;
-//         }
-//       }
-//     }
-//   }
-// }
-// @media only screen and (max-width: 667px) {
-//   .overview {
-//     > .products-fotos {
-//       flex-direction: column;
-//       > .logo-1 {
-//         height: 55vh !important;
-
-//         > .view-button-1 {
-//           margin-left: 21.5rem;
-//           margin-bottom: 13rem;
-//         }
-//       }
-
-//       > .twoImages > .logo-2 {
-//         width: 80%;
-//         margin-left: 6.5rem;
-
-//         > .view-button-2 {
-//           margin-left: 16rem;
-//           top: 57rem;
-//         }
-//       }
-
-//       > .twoImages > .logo-3 {
-//         width: 80%;
-//         margin-left: 6.5rem;
-
-//         > .view-button-3 {
-//           height: 2.7rem;
-//           top: 80rem;
-//           margin-left: 16rem;
-//         }
-//       }
-
-//       > .logo-4 {
-//         height: 55vh !important;
-//         margin-top: 1rem;
-
-//         > .view-button-4 {
-//           top: 26rem !important;
-//           margin-left: 21.5rem;
-
-//           height: 2.7rem;
-//         }
-//       }
-//     }
-
-//     > .footer {
-//       position: absolute;
-//       font-size: xx-small;
-
-//       > .footer-contact {
-//         font-size: small;
-
-//         > .footer-icons {
-//           font-size: medium;
-//         }
-//       }
-//     }
-//   }
-// }
