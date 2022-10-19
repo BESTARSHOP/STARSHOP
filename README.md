@@ -25,13 +25,17 @@
 
 ### /_ First, Install the needed packages _/
 
-npm install
+`npm install`
+
+### Nach der installation bitte folgendes seed script ausführung :
+
+`node scripts/loadproducts.js`
 
 ### /_ Then start the React app _/
 
-npm start
+`npm start`
 
-## Enspunkte
+## Endpunkte
 
 ### POST /user/login
 
