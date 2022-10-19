@@ -11,7 +11,7 @@ export default function ProductCard(props) {
     <Card
       style={{
         width: "19.4rem",
-        height: "34rem",
+        height: "38rem",
         backgroundColor: "#ffffff",
         border: "1px solid #dddddd",
       }}

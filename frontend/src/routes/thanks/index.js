@@ -18,21 +18,19 @@ export default function Thanks() {
   return (
     <>
       <div className="thanks">
-        <div className="transbox">
-          <span className="spanT">Thank</span>
-          <span className="spanY"> you</span>
-          <span className="spanF"> for</span>
-          <span className="spanY2"> your</span>
-          <span className="spanO"> order</span>
-        </div>
+        <span className="spanT">Thank</span>
+        <span className="spanY"> you</span>
+        <span className="spanF"> for</span>
+        <span className="spanY2"> your</span>
+        <span className="spanO"> order</span>
       </div>
+      <h2>maybe you are also interested in</h2>
       <div className="parrProducte">
-        <h2>maybe you are also interested in</h2>
         <div className="products">
           {products.map((product, i) => {
             return (
-              <div>
-                <ProductCard data={product} key={i} />
+              <div key={i}>
+                <ProductCard data={product} />
               </div>
             );
           })}
@@ -43,8 +41,6 @@ export default function Thanks() {
           to="/products"
           className="linkCountinueShopping"
           style={{
-            display: "flex",
-            alignItems: "center",
             width: "35rem",
             textDecoration: "none",
             color: "black",
@@ -52,7 +48,6 @@ export default function Thanks() {
             padding: "10px 20px",
             borderRadius: "5px",
             fontSize: "x-large",
-
             fontFamily: "Cutive Mono",
             fontWeight: "bold",
             border: "1px solid black",
