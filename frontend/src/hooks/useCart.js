@@ -16,6 +16,14 @@ export function CartProvider(props) {
   const user = useUser();
   const [cart, setCart] = React.useState(null);
   const [error, setError] = React.useState("");
+
+  React.useEffect(() => {
+    if (!user.data) {
+      return;
+    } else {
+      setError("");
+    }
+  }, [user.data]);
   React.useEffect(() => {
     if (!user.data) {
       setCart(null);

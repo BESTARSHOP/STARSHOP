@@ -59,7 +59,7 @@ export default function Products() {
               className="button products-jewelery-button"
               onClick={() => setCategory("jewelery")}
             >
-              jewelery
+              jewellery
             </button>
           </div>
 

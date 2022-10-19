@@ -23,7 +23,7 @@ export default function Overview() {
             </div>
             <div className="imgBlock img3">
               <Link to="/products/?category=jewelery" className="button3">
-                VIEW JEWELERY PRODUCTS
+                VIEW JEWELLERY PRODUCTS
               </Link>
             </div>
           </div>
@@ -37,20 +37,20 @@ export default function Overview() {
         <footer className="footer">
           <div className="footer-left">
             <p>
-              AGB - Datenschutz - cookies Verwalten - Impressum - Online
-              Marktplatz
+              General terms and conditions - data protection - managing cookies
+              - imprint - online marketplace
             </p>
             <p>
-              starshop.de ist durchschnittlich mit 4.61 von 5.00 Sternen
-              ausgezeichnet, auf Grundlage von 69729 Trusted Shops-Bewertungen
-              innerhalb der letzten 12 Monate.
-              <br />* Alle Preise inkl. der gesetzlichen MwSt. zzgl.
-              Versandkosten. Der Ursprungspreis bezieht sich auf den ehemaligen
-              StarShop-Preis. Produkte ohne Dekoration.
+              starshop.de has an average of 4.61 out of 5.00 stars, based on
+              69729 Trusted Shops reviews within the last 12 months.
+              <br />
+              * All prices include statutory VAT plus shipping costs. The
+              original price refers to the former StarShop price. Products
+              without decoration.
               <br />
             </p>
           </div>
-          <div className="footer-right">STARSHOP Deutschland SE & Co. KG</div>
+          <div className="footer-right">STARSHOP Germany SE & Co. KG</div>
           <div className="footer-contact">
             <p>You can also find us here</p>
             <div className="footer-icons">

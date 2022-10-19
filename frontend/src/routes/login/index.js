@@ -40,12 +40,13 @@ export default function Login() {
   if (showRegister) {
     return (
       <Layout>
+        <div className="backgroundImg"></div>
         <div className="Login">
           <form className="box" onSubmit={handeleRegisterClick}>
             <h1 className="h1-login">Register</h1>
 
             <hr />
-            <div className="input-group">
+            <div className="input-group-login">
               <div className="label">Email</div>
               <input
                 type="email"
@@ -55,7 +56,7 @@ export default function Login() {
               />
             </div>
 
-            <div className="input-group">
+            <div className="input-group-login">
               <div className="label">Password</div>
               <input
                 type="password"
@@ -64,7 +65,7 @@ export default function Login() {
               />
             </div>
 
-            <div className="input-group">
+            <div className="input-group-login">
               <div className="label">Name</div>
               <input
                 type="text"
