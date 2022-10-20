@@ -17,7 +17,7 @@ export default function Order() {
       <div className="orderContainer">
         <div className="productsOrder">
           <h1 className="myOrders">My Orders</h1>
-          <div className="scrolling">
+          <div className="scrollingOrder">
             <ListGroup>
               {cart.data?.products.map((item) => {
                 return (
